@@ -10,6 +10,30 @@ An open-source, ARTEX-derived workspace for security professionals and small tea
 
 Go backend · Next.js frontend · PostgreSQL + RLS · Customer-owned execution · AGPL-3.0
 
+[Screenshots](#inside-the-workspace) · [Workflow](#from-scope-to-evidence) · [Architecture](#how-the-pieces-connect) · [Self-build](#build-and-inspect-the-source) · [ARTEX & licenses](#built-on-artex-credited-properly)
+
+## Inside the workspace
+
+### One view of the assessment
+
+Tasks, findings awaiting review, recent activity and model usage in the same workspace.
+
+![Vulnetic dashboard showing task status, pending findings, token usage and activity with illustrative demo data](assets/dashboard.jpg)
+
+### Findings that keep their context
+
+Filter by severity, status, task or asset. Inspect linked evidence before deciding what belongs in the report; request a retest without replacing the original record.
+
+![Vulnetic findings overview with severity filters, pending and confirmed states, traffic evidence counts and retest actions; demo data](assets/findings.jpg)
+
+### Start with a conversation
+
+Discuss the authorized scope, select the execution context and follow the work from chat into a task.
+
+![Vulnetic chat showing an illustrative conversation about scope, evidence, human review and retesting](assets/chat.jpg)
+
+*Screenshots show the actual interface running locally with synthetic demo data. Names, findings, messages and usage figures are illustrative, not customer results or a benchmark. No live assessment or model request was run for these captures.*
+
 ## Why Vulnetic?
 
 ARTEX established the multi-agent foundation. Vulnetic develops that foundation into an account-isolated workspace with customer-owned execution and a reviewable path from a question to a finding.
@@ -27,18 +51,70 @@ ARTEX established the multi-agent foundation. Vulnetic develops that foundation 
 ## From scope to evidence
 
 ```mermaid
-flowchart LR
-  C[Chat + authorized scope] --> T[Task + model + executor]
-  T --> W[Planner and workers]
-  W --> E[Remote execution evidence]
-  E --> F[Candidate finding]
-  F --> H[Human review]
-  H --> R[Report]
-  R --> X[Retest as a new execution]
-  X --> E
+flowchart TB
+  subgraph SETUP["01 · Define the work"]
+    C["Chat · authorized scope"] --> T["Task · model profile · executor"]
+  end
+  subgraph EXECUTION["02 · Execute and collect"]
+    P["Planner · goals and workers"] --> W["Workers · tools on your executor"]
+    W --> E["Evidence · task and execution provenance"]
+    E --> F["Candidate finding"]
+  end
+  subgraph REVIEW["03 · Review and deliver"]
+    H{"Human review"} -->|Accepted| R["Report · reviewed findings and evidence"]
+    H -->|Needs more evidence| N["Continue investigation"]
+    R --> X["Retest · new execution, original proof retained"]
+    X --> O["Retest outcome · fixed, persists or inconclusive"]
+  end
+  T --> P
+  F --> H
+  N --> W
+  X -.-> E
+  classDef work fill:#eef2f6,stroke:#64748b,color:#20242b
+  classDef evidence fill:#eaf5f1,stroke:#39947b,color:#163c32
+  classDef review fill:#fff6e5,stroke:#c6983a,color:#574013
+  class C,T,P,W work
+  class E,F,X,O evidence
+  class H,R,N review
 ```
 
 The model proposes actions. Application code enforces ownership, execution permissions and protected-target policy. External pages, files and tool responses remain untrusted input. These boundaries reduce the impact of prompt injection; they are not a claim of absolute immunity.
+
+## How the pieces connect
+
+The workspace coordinates the assessment. Your executor runs customer tools. A separate gateway handles the agent connection, while account permissions and execution policy stay in application code.
+
+```mermaid
+flowchart TB
+  U["Security professional"] --> UI["Next.js workspace\nChat · Tasks · Findings · Reports"]
+  subgraph PLATFORM["Vulnetic platform"]
+    API["Go application\nAuthenticated API · streams"]
+    POLICY["Account ownership and mandatory policy"]
+    ENGINE["Task engine\nGoals · planner · workers · reporter"]
+    DB[("PostgreSQL + RLS\nAccount-scoped records and provenance")]
+    GW["Isolated agent gateway\nConnection protocol and sessions"]
+    API --> POLICY
+    POLICY --> ENGINE
+    API --> DB
+    ENGINE --> DB
+    ENGINE <-->|"Private authenticated control channel"| GW
+  end
+  subgraph CUSTOMER["Your execution machine"]
+    AGENT["Linux agent / Windows terminal\nUnprivileged OS user · absolute expiry"]
+    TOOLS["Bash / scripts · custom tools · MCP\nTemporary uploaded files"]
+    AGENT --> TOOLS
+  end
+  UI --> API
+  AGENT -->|"Outbound agent connection"| GW
+  TOOLS -->|"Within authorized scope"| TARGET["Your authorized targets"]
+  TOOLS -->|"Configured remote model requests"| LLM["Your LLM provider"]
+  classDef app fill:#eef2f6,stroke:#64748b,color:#20242b
+  classDef remote fill:#eaf5f1,stroke:#39947b,color:#163c32
+  class UI,API,POLICY,ENGINE,DB,GW app
+  class AGENT,TOOLS,TARGET,LLM remote
+```
+
+This is a component and trust-boundary overview, not a network firewall diagram. Execution authorization is revocable and expires at its original deadline. The gateway does not receive the application's database, vault or JWT credentials. New uploaded attachments stay on the selected executor; findings, reports and their recorded evidence retain platform-side history.
 
 ## Start with the hosted workspace
 

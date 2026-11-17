@@ -9,8 +9,8 @@
     },
     {
       "path": "assets/vulnetic-banner.svg",
-      "bytes": 1355,
-      "sha256": "39accb8b64db264df8b33bc50853aa9818b9332ca38ed633abe3b8c37853df94"
+      "bytes": 2149,
+      "sha256": "68d59a3e396b99e2f039d1fa7ed619606840f417684f1bc5a6f72c55e5b1e90a"
     },
     {
       "path": "binary-source-map.json",
@@ -2594,8 +2594,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 8095,
-      "sha256": "3d5c30059e6cca9b81ef3b42c796eeed39014e0603437be4ffb93234ecc28d35"
+      "bytes": 12031,
+      "sha256": "39bb7a1695e727218443ace5bbc9cea044561837078470e8e0d730086e1625f4"
     },
     {
       "path": "reconstruction/frontend-files.json",
@@ -26226,6 +26226,21 @@
       "path": "VALIDATION.json",
       "bytes": 929,
       "sha256": "f5b6d313475bdb63cceea0b6d629b54d789871b3444fa5c2007c5ae0a444904e"
+    },
+    {
+      "path": "assets/chat.jpg",
+      "bytes": 139492,
+      "sha256": "40ad448c7484a9ac116c3e18c34930c33915769c3964d7ce7299fcc0c5c75ad8"
+    },
+    {
+      "path": "assets/dashboard.jpg",
+      "bytes": 130193,
+      "sha256": "a01a68a7c6585affebb1ef1f287c89b1eb08f624253be0a112dcc8459681f78c"
+    },
+    {
+      "path": "assets/findings.jpg",
+      "bytes": 147813,
+      "sha256": "cd7a6e91a0bfc4b81a697eb75eb5fbf057dae64021b2b82b5d74812b433f9371"
     }
   ]
 }
