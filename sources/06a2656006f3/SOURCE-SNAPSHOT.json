@@ -1,0 +1,7 @@
+{
+  "original_revision": "06a2656006f3688c007eef28b26fbdde576cd476",
+  "legal_changes": "Preserves the reviewed legal overlay from e70e7e6dc6ab. This revision changes five frontend presentation components only; no account, RLS, gateway, executor or expiration logic changed.",
+  "excluded": "Git history, operational documents, local configurations, keys, databases, logs, generated binaries and runtime artifacts.",
+  "reconstruction": "Static frontend and Linux application built from this exported snapshot. Other product binaries retain their original versions.",
+  "license_resolution": "See ../../LICENSE-RESOLUTIONS.json; source-only final review profile; runtime behavior unchanged."
+}

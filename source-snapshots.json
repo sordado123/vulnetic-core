@@ -43,5 +43,12 @@
     "legal_overlay": "Same incorporated SDK legal notices as the reviewed baseline; original upstream license notices preserved. Hosted source-offer page, footer links and clarified legal text match the source-offer update. No authentication, account, RLS or execution policy logic changed.",
     "required_code_files": 1052,
     "required_code_complete": true
+  },
+  {
+    "source_revision": "06a2656006f3688c007eef28b26fbdde576cd476",
+    "directory": "sources/06a2656006f3",
+    "role": "Compact chat frontend update",
+    "base_revision": "e70e7e6dc6abb32262c1de28c984563ac45b6e8e",
+    "legal_overlay": "Same reviewed legal overlay; five frontend presentation changes only."
   }
 ]
