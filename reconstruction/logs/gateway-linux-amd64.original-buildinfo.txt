@@ -1,0 +1,20 @@
+<BUILD_ROOT>/original-artifacts/gateway-linux-amd64.bin: go1.26.3
+	path	github.com/sordado123/vulnetic/cmd/vulnetic-gateway
+	mod	github.com/sordado123/vulnetic	v0.0.0-20261117122209-5dd361d9b11d	
+	dep	github.com/creack/pty	v1.1.24	h1:bJrF4RRfyJnbTJqzRLHzcGaZK1NeM5kTC9jGgovnR1s=
+	dep	github.com/gorilla/websocket	v1.5.3	h1:saDtZ6Pbx/0u+bgYQ3q96pZgCzfhKXGPqt7kZ72aNNg=
+	dep	github.com/hinshun/vt10x	v0.0.0-20220301184237-5011da428d02	h1:AgcIVYPa6XJnU3phs104wLj8l5GEththEw6+F79YsIY=
+	dep	golang.org/x/crypto	v0.55.0	h1:+KWHjbgOaAQ66dh/YlkZKHlz9ZUlq61AFirAR9ntP8M=
+	dep	golang.org/x/net	v0.58.0	h1:ynWG7rqYi4ccpTEuPZ2QGWHktVEM9DMCj9yzDE0Q7To=
+	dep	golang.org/x/text	v0.41.0	h1:vz/seA0lnX87Othu2f/0L24RcgrXD9/YFTSuGjj3rH8=
+	build	-buildmode=exe
+	build	-compiler=gc
+	build	-trimpath=true
+	build	CGO_ENABLED=0
+	build	GOARCH=amd64
+	build	GOOS=linux
+	build	GOAMD64=v1
+	build	vcs=git
+	build	vcs.revision=5dd361d9b11da67b7afa3080b3c3c42cd1dcc8ae
+	build	vcs.time=2026-11-17T12:22:09Z
+	build	vcs.modified=false

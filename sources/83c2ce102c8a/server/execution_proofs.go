@@ -1,0 +1,129 @@
+package server
+
+import (
+	"context"
+	"crypto/sha256"
+	"encoding/hex"
+	"encoding/json"
+	"net/http"
+	"strings"
+
+	"github.com/sordado123/vulnetic/agent"
+	"github.com/sordado123/vulnetic/config"
+	"github.com/sordado123/vulnetic/db"
+	"github.com/sordado123/vulnetic/intercept"
+	"github.com/sordado123/vulnetic/internal/evidenceredact"
+)
+
+func (s *Server) wireExecutionProofs() {
+	agent.RecordExecutionProof = func(ctx context.Context, run agent.RunInfo, runID, tool string, input json.RawMessage, output string, failed bool) error {
+		if !config.SaaSMode() || strings.TrimSpace(output) == "" {
+			return nil
+		}
+		if run.AccountID <= 0 || run.Executor == nil {
+			return nil
+		}
+		eligible := tool == "Bash" || strings.HasPrefix(tool, "mcp__")
+		if !eligible {
+			row, err := s.m.pg.ForAccount(run.AccountID).GetTool(tool)
+			if err != nil {
+				return err
+			}
+			eligible = row != nil && !row.System && (row.Kind == "command" || row.Kind == "script" || row.Kind == "http")
+		}
+		if !eligible {
+			return nil
+		}
+		proof := db.ExecutionProof{Failed: failed, CaptureIncomplete: strings.Contains(output, "characters truncated]") || strings.Contains(output, "<persisted-output>"), AccountID: run.AccountID, UserID: run.UserID, RunID: runID, Tool: tool, Input: input, Output: output}
+		if run.ExecutorID > 0 {
+			executorID := run.ExecutorID
+			proof.ExecutorID = &executorID
+		}
+		if run.TaskID > 0 {
+			proof.TaskID = &run.TaskID
+		}
+		if convID := intercept.ConvIDFromContext(ctx); convID > 0 {
+			proof.ConversationID = &convID
+		}
+		_, err := s.persistProof(ctx, proof)
+		if err != nil {
+			s.evidenceFailures.Add(1)
+		}
+		return err
+	}
+}
+
+func (s *Server) taskExecutionProofs(w http.ResponseWriter, r *http.Request) {
+	task, ok := s.taskForAccount(r, r.PathValue("id"))
+	if !ok {
+		writeErr(w, 404, "task not found")
+		return
+	}
+	id, err := parseTaskID(task.ID)
+	if err != nil {
+		writeErr(w, 404, "task not found")
+		return
+	}
+	proofs, err := s.m.pg.ExecutionProofs(task.AccountID, &id, nil)
+	if err != nil {
+		writeErr(w, 503, "Execution evidence unavailable")
+		return
+	}
+	redactProofPreviews(proofs)
+	writeJSON(w, 200, map[string]any{"proofs": proofs, "traffic_capture": "unavailable"})
+}
+func (s *Server) conversationExecutionProofs(w http.ResponseWriter, r *http.Request) {
+	_, conv, ok := s.convByID(w, r)
+	if !ok {
+		return
+	}
+	proofs, err := s.m.pg.ExecutionProofs(conv.AccountID, nil, &conv.ID)
+	if err != nil {
+		writeErr(w, 503, "Execution evidence unavailable")
+		return
+	}
+	redactProofPreviews(proofs)
+	writeJSON(w, 200, map[string]any{"proofs": proofs})
+}
+
+func redactProofPreviews(proofs []db.ExecutionProof) {
+	for i := range proofs {
+		proofs[i].Input = evidenceredact.JSON(proofs[i].Input)
+		proofs[i].Output = evidenceredact.Text(proofs[i].Output)
+		// The response hash describes its remasked preview, not the stored original.
+		digest := sha256.Sum256([]byte(proofs[i].Output))
+		proofs[i].PreviewDigest = hex.EncodeToString(digest[:])
+	}
+}
+func (s *Server) verifyFinding(w http.ResponseWriter, r *http.Request) {
+	id, ok := pathInt(r, "id")
+	if !ok {
+		writeErr(w, 400, "invalid finding id")
+		return
+	}
+	if _, ok = s.findingForAccount(r, id); !ok {
+		writeErr(w, 404, "finding not found")
+		return
+	}
+	var req struct {
+		ProofIDs []int64 `json:"proof_ids"`
+		Steps    string  `json:"steps"`
+	}
+	if !decodeConversationRequest(w, r, &req) {
+		return
+	}
+	accountID, userID, ok := accountFromContext(r.Context())
+	if !ok {
+		writeErr(w, 401, "authentication required")
+		return
+	}
+	if err := s.validateProofArtifacts(accountID, req.ProofIDs); err != nil {
+		writeErr(w, 422, err.Error())
+		return
+	}
+	if err := s.m.pg.ForAccount(accountID).VerifyFinding(r.Context(), accountID, userID, id, req.ProofIDs, req.Steps); err != nil {
+		writeErr(w, 422, err.Error())
+		return
+	}
+	writeJSON(w, 200, map[string]any{"verification_state": "verified"})
+}

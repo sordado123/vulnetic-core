@@ -1,0 +1,26 @@
+{
+  "_comment": "Copy as config.json (or point elsewhere with the VULNETIC_CONFIG environment variable; the deprecated alias ARTEX_CONFIG still works). This file only carries database and skill_dir; LLM and other settings come from environment variables or in-app settings, not this file.",
+
+  "_comment_database": "PostgreSQL connection. Precedence: environment variable VULNETIC_PG_DSN (deprecated alias ARTEX_PG_DSN) > database in this file. Two ways, pick one: (A) fill in the component fields below; (B) fill only database.dsn with a full connection string.",
+  "database": {
+    "host": "127.0.0.1",
+    "port": 5433,
+    "user": "vulnetic",
+    "password": "",
+    "dbname": "vulnetic",
+    "sslmode": "disable",
+    "app_password": ""
+  },
+
+  "_comment_app_password": "Optional: password for the non-owner, RLS-subject 'vulnetic_app' role (Row-Level Security defense-in-depth, RLS-1 — see db/schema.sql section Z2 and docs/saas-blueprint.html). Precedence: environment variable VULNETIC_PG_APP_PASSWORD > database.app_password above. Empty (the default) leaves RLS-1 off, exactly as before it existed. db.Open provisions the role itself on startup when this is set — nothing else to create by hand. The role connects to the same host/port/dbname/sslmode as the database block above, just with its own user/password.",
+
+  "_comment_database_dsn": "Form (B): delete the database above and use a full DSN instead. When dsn is non-empty the component fields are ignored.",
+  "_example_database_dsn": {
+    "database": {
+      "dsn": "postgres://user:pass@db.example.com:5432/vulnetic?sslmode=require"
+    }
+  },
+
+  "_comment_skill_dir": "Skill root directory (one skill per subdirectory, each with a SKILL.md). Precedence: environment variable VULNETIC_SKILL_DIR (deprecated alias ARTEX_SKILL_DIR) > this field > default (skills/ next to the executable). Leave empty or delete this field to use the default. Relative paths resolve against the current working directory.",
+  "skill_dir": "/opt/vulnetic/skills"
+}

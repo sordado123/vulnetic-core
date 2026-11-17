@@ -1,0 +1,209 @@
+{
+  "counts": {
+    "files": 5243,
+    "known_private_values_checked": 8,
+    "known_private_matches": 0,
+    "candidates": 24
+  },
+  "knownHits": [],
+  "findings": [
+    {
+      "file": "sources/5dd361d9b11d/config/config_test.go",
+      "line": 33,
+      "type": "credential-in-url",
+      "test_fixture": true,
+      "review": "non-secret example/fixture",
+      "reason": "Fixed unit-test DSN"
+    },
+    {
+      "file": "sources/5dd361d9b11d/config.example.json",
+      "line": 20,
+      "type": "credential-in-url",
+      "test_fixture": false,
+      "review": "non-secret example/fixture",
+      "reason": "Documented example"
+    },
+    {
+      "file": "sources/5dd361d9b11d/docker-compose.beta.yml",
+      "line": 27,
+      "type": "credential-in-url",
+      "test_fixture": false,
+      "review": "non-secret example/fixture",
+      "reason": "Environment placeholder"
+    },
+    {
+      "file": "sources/5dd361d9b11d/docker-compose.yml",
+      "line": 23,
+      "type": "credential-in-url",
+      "test_fixture": false,
+      "review": "non-secret example/fixture",
+      "reason": "Environment placeholder"
+    },
+    {
+      "file": "sources/5dd361d9b11d/reset-password.sh",
+      "line": 18,
+      "type": "credential-in-url",
+      "test_fixture": false,
+      "review": "non-secret example/fixture",
+      "reason": "Usage example"
+    },
+    {
+      "file": "sources/5dd361d9b11d/vault/vault_test.go",
+      "line": 16,
+      "type": "private-key",
+      "test_fixture": true,
+      "review": "non-secret example/fixture",
+      "reason": "Synthetic unusable fake-key fixture"
+    },
+    {
+      "file": "sources/83c2ce102c8a/config/config_test.go",
+      "line": 33,
+      "type": "credential-in-url",
+      "test_fixture": true,
+      "review": "non-secret example/fixture",
+      "reason": "Fixed unit-test DSN"
+    },
+    {
+      "file": "sources/83c2ce102c8a/config.example.json",
+      "line": 20,
+      "type": "credential-in-url",
+      "test_fixture": false,
+      "review": "non-secret example/fixture",
+      "reason": "Documented example"
+    },
+    {
+      "file": "sources/83c2ce102c8a/docker-compose.beta.yml",
+      "line": 27,
+      "type": "credential-in-url",
+      "test_fixture": false,
+      "review": "non-secret example/fixture",
+      "reason": "Environment placeholder"
+    },
+    {
+      "file": "sources/83c2ce102c8a/docker-compose.yml",
+      "line": 23,
+      "type": "credential-in-url",
+      "test_fixture": false,
+      "review": "non-secret example/fixture",
+      "reason": "Environment placeholder"
+    },
+    {
+      "file": "sources/83c2ce102c8a/reset-password.sh",
+      "line": 18,
+      "type": "credential-in-url",
+      "test_fixture": false,
+      "review": "non-secret example/fixture",
+      "reason": "Usage example"
+    },
+    {
+      "file": "sources/83c2ce102c8a/vault/vault_test.go",
+      "line": 16,
+      "type": "private-key",
+      "test_fixture": true,
+      "review": "non-secret example/fixture",
+      "reason": "Synthetic unusable fake-key fixture"
+    },
+    {
+      "file": "sources/e70e7e6dc6ab/config/config_test.go",
+      "line": 33,
+      "type": "credential-in-url",
+      "test_fixture": true,
+      "review": "non-secret example/fixture",
+      "reason": "Fixed unit-test DSN"
+    },
+    {
+      "file": "sources/e70e7e6dc6ab/config.example.json",
+      "line": 20,
+      "type": "credential-in-url",
+      "test_fixture": false,
+      "review": "non-secret example/fixture",
+      "reason": "Documented example"
+    },
+    {
+      "file": "sources/e70e7e6dc6ab/docker-compose.beta.yml",
+      "line": 27,
+      "type": "credential-in-url",
+      "test_fixture": false,
+      "review": "non-secret example/fixture",
+      "reason": "Environment placeholder"
+    },
+    {
+      "file": "sources/e70e7e6dc6ab/docker-compose.yml",
+      "line": 23,
+      "type": "credential-in-url",
+      "test_fixture": false,
+      "review": "non-secret example/fixture",
+      "reason": "Environment placeholder"
+    },
+    {
+      "file": "sources/e70e7e6dc6ab/reset-password.sh",
+      "line": 18,
+      "type": "credential-in-url",
+      "test_fixture": false,
+      "review": "non-secret example/fixture",
+      "reason": "Usage example"
+    },
+    {
+      "file": "sources/e70e7e6dc6ab/vault/vault_test.go",
+      "line": 16,
+      "type": "private-key",
+      "test_fixture": true,
+      "review": "non-secret example/fixture",
+      "reason": "Synthetic unusable fake-key fixture"
+    },
+    {
+      "file": "sources/f92615b76a05/config/config_test.go",
+      "line": 33,
+      "type": "credential-in-url",
+      "test_fixture": true,
+      "review": "non-secret example/fixture",
+      "reason": "Fixed unit-test DSN"
+    },
+    {
+      "file": "sources/f92615b76a05/config.example.json",
+      "line": 20,
+      "type": "credential-in-url",
+      "test_fixture": false,
+      "review": "non-secret example/fixture",
+      "reason": "Documented example"
+    },
+    {
+      "file": "sources/f92615b76a05/docker-compose.beta.yml",
+      "line": 27,
+      "type": "credential-in-url",
+      "test_fixture": false,
+      "review": "non-secret example/fixture",
+      "reason": "Environment placeholder"
+    },
+    {
+      "file": "sources/f92615b76a05/docker-compose.yml",
+      "line": 23,
+      "type": "credential-in-url",
+      "test_fixture": false,
+      "review": "non-secret example/fixture",
+      "reason": "Environment placeholder"
+    },
+    {
+      "file": "sources/f92615b76a05/reset-password.sh",
+      "line": 18,
+      "type": "credential-in-url",
+      "test_fixture": false,
+      "review": "non-secret example/fixture",
+      "reason": "Usage example"
+    },
+    {
+      "file": "sources/f92615b76a05/vault/vault_test.go",
+      "line": 16,
+      "type": "private-key",
+      "test_fixture": true,
+      "review": "non-secret example/fixture",
+      "reason": "Synthetic unusable fake-key fixture"
+    }
+  ],
+  "limits": [
+    "Not an absolute privacy guarantee; source allowlist, no private Git history and eight known secret representations checked.",
+    "Generated source-offer frontend and hosted application built; no paid LLM calls, target operations or product tests added.",
+    "Go dependency archives live in the complete release asset, not in Git. They preserve public upstream fixtures documented in DEPENDENCIES.md."
+  ],
+  "review_status": "24 candidates reviewed; no known operational secret match"
+}

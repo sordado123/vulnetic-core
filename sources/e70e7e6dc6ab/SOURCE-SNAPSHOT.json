@@ -1,0 +1,7 @@
+{
+  "original_revision": "e70e7e6dc6abb32262c1de28c984563ac45b6e8e",
+  "legal_changes": "Same incorporated SDK legal notices as the reviewed baseline; original upstream license notices preserved. Hosted source-offer page, footer links and clarified legal text match the source-offer update. No authentication, account, RLS or execution policy logic changed.",
+  "excluded": "Git history, operational documents, local configurations, keys, databases, logs, generated binaries and runtime artifacts.",
+  "reconstruction": "New hosted Linux application and static frontend built from this exported snapshot; gateway, agents and reconciler retain their original versions.",
+  "license_resolution": "See ../../LICENSE-RESOLUTIONS.json; source-only final review profile; runtime behavior unchanged."
+}

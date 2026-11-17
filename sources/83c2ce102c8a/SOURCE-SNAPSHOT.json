@@ -1,0 +1,7 @@
+{
+  "original_revision": "83c2ce102c8a397fc219fb90ba7ea1b9624ad71c",
+  "legal_changes": "Updated notices, copied reference licenses, corrected php2shell MIT copyright from upstream, SDK incorporation comments and build documentation. No runtime logic edits. Login legal copy clarified to preserve AGPL rights and distinguish hosted-service access controls; no authentication or permission logic edited.",
+  "excluded": "Git history, operational documents, local configurations, keys, databases, logs, generated binaries and runtime artifacts.",
+  "reconstruction": "See ../../reconstruction/results.json; successfully compiled, not certified bit-identical.",
+  "license_resolution": "See ../../LICENSE-RESOLUTIONS.json; source-only final review profile; runtime behavior unchanged."
+}

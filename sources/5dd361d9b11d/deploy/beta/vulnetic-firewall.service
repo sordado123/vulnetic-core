@@ -1,0 +1,13 @@
+[Unit]
+Description=Vulnetic gateway and core network restrictions
+Wants=network-online.target
+After=network-online.target
+Before=docker.service
+
+[Service]
+Type=oneshot
+ExecStart=/opt/vulnetic/deploy/beta/platform-firewall.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

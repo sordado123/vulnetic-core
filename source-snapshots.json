@@ -1,0 +1,47 @@
+[
+  {
+    "source_revision": "5dd361d9b11da67b7afa3080b3c3c42cd1dcc8ae",
+    "directory": "sources/5dd361d9b11d",
+    "files": 1208,
+    "legal_overlay": "Updated notices and third-party license texts; runtime source is unchanged",
+    "required_code_files": 1052,
+    "required_code_complete": true,
+    "license_profile": "final-source-only; legal-copy overlays explicitly listed",
+    "selected_original_files": 1192,
+    "required_scoped_tracked_files": 1178,
+    "scoped_tracked_coverage_complete": true
+  },
+  {
+    "source_revision": "83c2ce102c8a397fc219fb90ba7ea1b9624ad71c",
+    "directory": "sources/83c2ce102c8a",
+    "files": 1114,
+    "legal_overlay": "Updated notices and third-party license texts; runtime source is unchanged",
+    "required_code_files": 961,
+    "required_code_complete": true,
+    "license_profile": "final-source-only; legal-copy overlays explicitly listed",
+    "selected_original_files": 1098,
+    "required_scoped_tracked_files": 1084,
+    "scoped_tracked_coverage_complete": true
+  },
+  {
+    "source_revision": "f92615b76a05906bb50f6440b93848b88cb22587",
+    "directory": "sources/f92615b76a05",
+    "files": 1161,
+    "legal_overlay": "Updated notices and third-party license texts; runtime source is unchanged",
+    "required_code_files": 1005,
+    "required_code_complete": true,
+    "license_profile": "final-source-only; legal-copy overlays explicitly listed",
+    "selected_original_files": 1145,
+    "required_scoped_tracked_files": 1131,
+    "scoped_tracked_coverage_complete": true
+  },
+  {
+    "source_revision": "e70e7e6dc6abb32262c1de28c984563ac45b6e8e",
+    "directory": "sources/e70e7e6dc6ab",
+    "role": "Hosted source-offer update",
+    "base_revision": "5dd361d9b11da67b7afa3080b3c3c42cd1dcc8ae",
+    "legal_overlay": "Same incorporated SDK legal notices as the reviewed baseline; original upstream license notices preserved. Hosted source-offer page, footer links and clarified legal text match the source-offer update. No authentication, account, RLS or execution policy logic changed.",
+    "required_code_files": 1052,
+    "required_code_complete": true
+  }
+]

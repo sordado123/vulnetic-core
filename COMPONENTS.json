@@ -1,0 +1,16 @@
+{
+  "core": {
+    "source_directories": [
+      "sources/e70e7e6dc6ab",
+      "sources/5dd361d9b11d",
+      "sources/f92615b76a05"
+    ],
+    "role": "Complete integrated application/frontend/gateway/proof reconciler; no proprietary SaaS carve-out"
+  },
+  "agent": {
+    "source_directories": [
+      "sources/83c2ce102c8a"
+    ],
+    "role": "Complete corresponding module tree for Linux/Windows executor; includes shared packages, tests and tools needed to build it rather than an incomplete cmd-only extraction"
+  }
+}

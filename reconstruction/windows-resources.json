@@ -1,0 +1,12 @@
+{
+  "product": "Vulnetic Executor",
+  "version": "0.2.0-preview+git.83c2ce102c8a",
+  "description": "Temporary foreground remote command executor for Vulnetic security workspaces",
+  "original_filename": "VulneticExecutor.exe",
+  "numeric_version": "0.2.0-preview+git.83c2ce102c8a",
+  "manifest_level": "asInvoker",
+  "ui_access": "false",
+  "signature": "NotSigned",
+  "binary_executed": false,
+  "sha256": "f1d19b550608dfef398994da5bdc0308c6dbb1f5e658a6c97a9c80e9268b0593"
+}

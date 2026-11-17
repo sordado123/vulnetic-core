@@ -1,0 +1,12 @@
+.DS_Store
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+.env
+.env.beta
+config.json
+*.key
+*.pem
+*.pfx
+/dependency-sources/go/

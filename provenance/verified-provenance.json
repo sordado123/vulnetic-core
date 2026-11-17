@@ -1,0 +1,533 @@
+{
+  "prepared": "2026-11-17",
+  "publication_approved": false,
+  "noa": {
+    "norma_tag": "v0.4.4",
+    "norma_revision": "7714f3d6901aa5428e24ee4cde7e1e72a6c4b7bd",
+    "initial_port_revision": "35247d952a2a80889df57f0d899b64efe93773b4",
+    "rules_port_revision": "b996f8a491c0ccd0ff30f75ed4d49eb0451ad8c2",
+    "license_history": [
+      {
+        "repository": "acp",
+        "revision": "9747d18a6e3019617316141bc82fa744dc53c341",
+        "path": "LICENSE",
+        "sha256": "5760794bfa6f4acdbc51de6022e7038c7041ee6e79e71234944c69293d272695",
+        "evidence": "provenance/acp-kernel-original-MIT.txt"
+      },
+      {
+        "repository": "acp",
+        "revision": "9e726fb536ff94761572822afe46cc7193b8d972",
+        "path": "LICENSE",
+        "sha256": "5f82d3c8724c30a0ece8819b23babc4587a50eddf350273c6c8f0c936bad2a74",
+        "evidence": "provenance/acp-kernel-MIT-additional-attribution.txt"
+      },
+      {
+        "repository": "norma",
+        "revision": "7714f3d6901aa5428e24ee4cde7e1e72a6c4b7bd",
+        "path": "LICENSE",
+        "sha256": "930307fe92c0cdd524172effd340e5177b4e054d8576735db4e0b08f69ac6ba9",
+        "evidence": "provenance/norma-v0.4.4-LICENSE.txt"
+      }
+    ],
+    "matches": [
+      {
+        "local": "internal/norma/noa/archive.go",
+        "upstream": "noa/archive.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "bb85ea1b47815660f27c568f0092f347a95b3e76a6269863d203f0932491d9bd",
+        "local_sha256": "bb85ea1b47815660f27c568f0092f347a95b3e76a6269863d203f0932491d9bd"
+      },
+      {
+        "local": "internal/norma/noa/archive_mem_test.go",
+        "upstream": "noa/archive_mem_test.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "c18e9263467d953957fc6d443a78587d7633454ffe24d749f198a17fbeb16911",
+        "local_sha256": "c18e9263467d953957fc6d443a78587d7633454ffe24d749f198a17fbeb16911"
+      },
+      {
+        "local": "internal/norma/noa/boundaries.go",
+        "upstream": "noa/boundaries.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "d205861b10308be1926db0e9339e066301bc0122cc7989e8eac433bb07884d9f",
+        "local_sha256": "d205861b10308be1926db0e9339e066301bc0122cc7989e8eac433bb07884d9f"
+      },
+      {
+        "local": "internal/norma/noa/boundaries_test.go",
+        "upstream": "noa/boundaries_test.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "a5b88a83ba52bd452963ca4b28a11e8c1409138a3cfeffcc0d8042c3eda8f5af",
+        "local_sha256": "a5b88a83ba52bd452963ca4b28a11e8c1409138a3cfeffcc0d8042c3eda8f5af"
+      },
+      {
+        "local": "internal/norma/noa/compress.go",
+        "upstream": "noa/compress.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "6b73bab61625793ef95fece51bb3de8689ad07259560dc2694c7c665c9e784f8",
+        "local_sha256": "6b73bab61625793ef95fece51bb3de8689ad07259560dc2694c7c665c9e784f8"
+      },
+      {
+        "local": "internal/norma/noa/compress_test.go",
+        "upstream": "noa/compress_test.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "3a6f0ac4979fe7e76a631c7a3af17c6928ad20531504cbc18504dca5554014bf",
+        "local_sha256": "3a6f0ac4979fe7e76a631c7a3af17c6928ad20531504cbc18504dca5554014bf"
+      },
+      {
+        "local": "internal/norma/noa/config.go",
+        "upstream": "noa/config.go",
+        "exact_after_import_path_normalization": false,
+        "upstream_sha256": "88a6fa10b109bb2cc3c3fc8fe530ba3071cd22b9c6b541169756f663081f1bf7",
+        "local_sha256": "837d2076af269adefd883db6332261d4c548b6b628662311e2f5d969ff04e032"
+      },
+      {
+        "local": "internal/norma/noa/config_test.go",
+        "upstream": "noa/config_test.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "7e76fd933328260eefd6e17213ac5b58446cbc94e2f25192911ffe607854af5a",
+        "local_sha256": "7e76fd933328260eefd6e17213ac5b58446cbc94e2f25192911ffe607854af5a"
+      },
+      {
+        "local": "internal/norma/noa/const.go",
+        "upstream": "noa/const.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "8bbf7c1db66b32bf374fb14659d1f70e256b4de042f5ca6a949705824fd097eb",
+        "local_sha256": "8bbf7c1db66b32bf374fb14659d1f70e256b4de042f5ca6a949705824fd097eb"
+      },
+      {
+        "local": "internal/norma/noa/edge_test.go",
+        "upstream": "noa/edge_test.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "78aa0a8289f7606f77d22fce95e5c3874ef021db3ab877d90d73960c7665ace6",
+        "local_sha256": "78aa0a8289f7606f77d22fce95e5c3874ef021db3ab877d90d73960c7665ace6"
+      },
+      {
+        "local": "internal/norma/noa/fuzz_test.go",
+        "upstream": "noa/fuzz_test.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "6db8ffa2285ea3b87c13da9a03803b776b2dc21e51086f9501d29b279a857981",
+        "local_sha256": "6db8ffa2285ea3b87c13da9a03803b776b2dc21e51086f9501d29b279a857981"
+      },
+      {
+        "local": "internal/norma/noa/hideconsumed.go",
+        "upstream": "noa/hideconsumed.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "2e9349a9801ca7104e8683de84785c0561c0e2c8d40b80fd20252beda62f0837",
+        "local_sha256": "2e9349a9801ca7104e8683de84785c0561c0e2c8d40b80fd20252beda62f0837"
+      },
+      {
+        "local": "internal/norma/noa/hideconsumed_test.go",
+        "upstream": "noa/hideconsumed_test.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "eeb79a1f7bbcf05cf94d0e3760b56aa850d9db923aae83b58422504e0e13d604",
+        "local_sha256": "eeb79a1f7bbcf05cf94d0e3760b56aa850d9db923aae83b58422504e0e13d604"
+      },
+      {
+        "local": "internal/norma/noa/nudge.go",
+        "upstream": "noa/nudge.go",
+        "exact_after_import_path_normalization": false,
+        "upstream_sha256": "6c7b82849b704e9a1af89323b45429754b27e3a8090b9eabc868f5ebde406b61",
+        "local_sha256": "6f7a4d1d23ceb85d0dc4cf01199c8b6541b907f93cf9a76a612ae6db80e9094b"
+      },
+      {
+        "local": "internal/norma/noa/nudge_test.go",
+        "upstream": "noa/nudge_test.go",
+        "exact_after_import_path_normalization": false,
+        "upstream_sha256": "ab4b88d54a4ac3c562e645ed32f3b1144f7ac3ae6e26779bc2853c90eb5e4429",
+        "local_sha256": "e5700541062df1fd27bacf1e52e86bde6e5833193ac3dc6f747af04dec434a5d"
+      },
+      {
+        "local": "internal/norma/noa/nudge_types.go",
+        "upstream": "noa/nudge_types.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "edc2f7f2752e53abfba9ca112eb2e2133cd55ecdd3e4bca05bd6abe6e302c9a3",
+        "local_sha256": "edc2f7f2752e53abfba9ca112eb2e2133cd55ecdd3e4bca05bd6abe6e302c9a3"
+      },
+      {
+        "local": "internal/norma/noa/nudgetext.go",
+        "upstream": "noa/nudgetext.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "fc4f2aaa03b00c8b3d7049c2abe596b0ffb48c8ce3e91ecc6b7a631b40777cf2",
+        "local_sha256": "fc4f2aaa03b00c8b3d7049c2abe596b0ffb48c8ce3e91ecc6b7a631b40777cf2"
+      },
+      {
+        "local": "internal/norma/noa/nudgetext_test.go",
+        "upstream": "noa/nudgetext_test.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "88a380b75238d0ddf244b0fd45a7f4a3baefc561655a0bd2c6602309f1bc878b",
+        "local_sha256": "88a380b75238d0ddf244b0fd45a7f4a3baefc561655a0bd2c6602309f1bc878b"
+      },
+      {
+        "local": "internal/norma/noa/pacing_test.go",
+        "upstream": "noa/pacing_test.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "d445dcad30e6c416649b95c8c9d2f739fb6b6158e930015cbb2a46bc64b6869d",
+        "local_sha256": "d445dcad30e6c416649b95c8c9d2f739fb6b6158e930015cbb2a46bc64b6869d"
+      },
+      {
+        "local": "internal/norma/noa/panel.go",
+        "upstream": "noa/panel.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "88e666051c308462a6c54ff05a8442016d3e1d5ee854d258071f241fef610d31",
+        "local_sha256": "88e666051c308462a6c54ff05a8442016d3e1d5ee854d258071f241fef610d31"
+      },
+      {
+        "local": "internal/norma/noa/panel_test.go",
+        "upstream": "noa/panel_test.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "795e2e7e9fe3d9a566530a0f15a2cfb6d25a06a2c7eef98986821061fa630447",
+        "local_sha256": "795e2e7e9fe3d9a566530a0f15a2cfb6d25a06a2c7eef98986821061fa630447"
+      },
+      {
+        "local": "internal/norma/noa/parseinput.go",
+        "upstream": "noa/parseinput.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "893cfdcf839b370569ac554c08a96abd06f81f231e9206d0578b6a236f5de9d8",
+        "local_sha256": "893cfdcf839b370569ac554c08a96abd06f81f231e9206d0578b6a236f5de9d8"
+      },
+      {
+        "local": "internal/norma/noa/parseinput_test.go",
+        "upstream": "noa/parseinput_test.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "1c0df5070b80bf5fc6f2a6cb7d00b74704da2a7a1db1f03925f110fece68146b",
+        "local_sha256": "1c0df5070b80bf5fc6f2a6cb7d00b74704da2a7a1db1f03925f110fece68146b"
+      },
+      {
+        "local": "internal/norma/noa/pipeline.go",
+        "upstream": "noa/pipeline.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "45587a1d2d8c914b26f5f5dcb5960fe78a19bbe1d4fecd6597b403f6626324e6",
+        "local_sha256": "45587a1d2d8c914b26f5f5dcb5960fe78a19bbe1d4fecd6597b403f6626324e6"
+      },
+      {
+        "local": "internal/norma/noa/processturn.go",
+        "upstream": "noa/processturn.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "073bf3cc34fcc7a9450361ca7d2696a56032ec72ad9c45827f5294b027b6b49a",
+        "local_sha256": "073bf3cc34fcc7a9450361ca7d2696a56032ec72ad9c45827f5294b027b6b49a"
+      },
+      {
+        "local": "internal/norma/noa/processturn_test.go",
+        "upstream": "noa/processturn_test.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "d316ef9278b84a0018c8a391ccbc2eb06b7ea16b70ed6f92a591597d3025a1b2",
+        "local_sha256": "d316ef9278b84a0018c8a391ccbc2eb06b7ea16b70ed6f92a591597d3025a1b2"
+      },
+      {
+        "local": "internal/norma/noa/prompts_rules.go",
+        "upstream": "noa/prompts_rules.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "98f3b29df389784c7f5ea909a01196abccac4ee2e14c3e4162353bf4ac0661d3",
+        "local_sha256": "98f3b29df389784c7f5ea909a01196abccac4ee2e14c3e4162353bf4ac0661d3"
+      },
+      {
+        "local": "internal/norma/noa/prompts_rules_test.go",
+        "upstream": "noa/prompts_rules_test.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "366fa495f5003db3ec77e4932b371dabe39298fad46f5ad0bf03079a0243e94d",
+        "local_sha256": "366fa495f5003db3ec77e4932b371dabe39298fad46f5ad0bf03079a0243e94d"
+      },
+      {
+        "local": "internal/norma/noa/prompts_system.go",
+        "upstream": "noa/prompts_system.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "dd733f1f1bd664195538cd3dcff01a23db323ff512352b08d5907a77dbff46c9",
+        "local_sha256": "dd733f1f1bd664195538cd3dcff01a23db323ff512352b08d5907a77dbff46c9"
+      },
+      {
+        "local": "internal/norma/noa/protected.go",
+        "upstream": "noa/protected.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "4133a1598da348765c96b742316741dedf5e4d1bb243c4f938deb84d4503c494",
+        "local_sha256": "4133a1598da348765c96b742316741dedf5e4d1bb243c4f938deb84d4503c494"
+      },
+      {
+        "local": "internal/norma/noa/prune.go",
+        "upstream": "noa/prune.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "b5905007e3028d7862f95f5587a88ce6fce8427d8bcd7b2f231d6e4718e37169",
+        "local_sha256": "b5905007e3028d7862f95f5587a88ce6fce8427d8bcd7b2f231d6e4718e37169"
+      },
+      {
+        "local": "internal/norma/noa/prune_test.go",
+        "upstream": "noa/prune_test.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "ba77382466b752883ef89497b0c26b9315223da4c71252f46e29d37534db8a96",
+        "local_sha256": "ba77382466b752883ef89497b0c26b9315223da4c71252f46e29d37534db8a96"
+      },
+      {
+        "local": "internal/norma/noa/rebuild.go",
+        "upstream": "noa/rebuild.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "ec1450ef97e88f0d390791f0fd6ffc3bbeb683017fd2318d3d3272f9998229a3",
+        "local_sha256": "ec1450ef97e88f0d390791f0fd6ffc3bbeb683017fd2318d3d3272f9998229a3"
+      },
+      {
+        "local": "internal/norma/noa/recommend.go",
+        "upstream": "noa/recommend.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "02d52819b5809c60b81f3677e20a8101bdcd76bf79f206591fa621733d43bcb5",
+        "local_sha256": "02d52819b5809c60b81f3677e20a8101bdcd76bf79f206591fa621733d43bcb5"
+      },
+      {
+        "local": "internal/norma/noa/recommend_test.go",
+        "upstream": "noa/recommend_test.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "beb3b03f21b4c919017788fd9ab08068a270d3f3c848f7fa08f14e9de78b0577",
+        "local_sha256": "beb3b03f21b4c919017788fd9ab08068a270d3f3c848f7fa08f14e9de78b0577"
+      },
+      {
+        "local": "internal/norma/noa/refs.go",
+        "upstream": "noa/refs.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "007f04c6a3575b2e0dc2e5e8e1e1d96cf9194978a68325133ba7527d34327577",
+        "local_sha256": "007f04c6a3575b2e0dc2e5e8e1e1d96cf9194978a68325133ba7527d34327577"
+      },
+      {
+        "local": "internal/norma/noa/refs_test.go",
+        "upstream": "noa/refs_test.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "8a08d31af2601e67761e41023e32b45f7602aca350e683341eaab11faad226be",
+        "local_sha256": "8a08d31af2601e67761e41023e32b45f7602aca350e683341eaab11faad226be"
+      },
+      {
+        "local": "internal/norma/noa/schema.go",
+        "upstream": "noa/schema.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "878c8c634ad3a54d82edd9814eda804a0027cc1ba8cf985989efa7b4a2658a88",
+        "local_sha256": "878c8c634ad3a54d82edd9814eda804a0027cc1ba8cf985989efa7b4a2658a88"
+      },
+      {
+        "local": "internal/norma/noa/state.go",
+        "upstream": "noa/state.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "234c2eab926a843797b701498da9b94fb873dd4eaae59ec45571a78b163876c1",
+        "local_sha256": "234c2eab926a843797b701498da9b94fb873dd4eaae59ec45571a78b163876c1"
+      },
+      {
+        "local": "internal/norma/noa/sync.go",
+        "upstream": "noa/sync.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "64b022819375629b6a96bb1c811a6bb86bf9c3a26beb8789d118d2a617447f3e",
+        "local_sha256": "64b022819375629b6a96bb1c811a6bb86bf9c3a26beb8789d118d2a617447f3e"
+      },
+      {
+        "local": "internal/norma/noa/sync_test.go",
+        "upstream": "noa/sync_test.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "5f0d7231294cdb3e2afa2427435954b8aaafc102c38be2ffdc7836e4f7e1ed16",
+        "local_sha256": "5f0d7231294cdb3e2afa2427435954b8aaafc102c38be2ffdc7836e4f7e1ed16"
+      },
+      {
+        "local": "internal/norma/noa/tier.go",
+        "upstream": "noa/tier.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "1392e1cd4af05b1d86a2c8f72f2981af77ac53672403e312d21072bbedc1c200",
+        "local_sha256": "1392e1cd4af05b1d86a2c8f72f2981af77ac53672403e312d21072bbedc1c200"
+      },
+      {
+        "local": "internal/norma/noa/tier_test.go",
+        "upstream": "noa/tier_test.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "0e16876d9ab02f7e069dad057e32409c56650b861d92f45b29b079b665b00578",
+        "local_sha256": "0e16876d9ab02f7e069dad057e32409c56650b861d92f45b29b079b665b00578"
+      },
+      {
+        "local": "internal/norma/noa/tokenize.go",
+        "upstream": "noa/tokenize.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "8e5d83a010342961ce76dae5fad6f679f0c92a425c786a68e29fed7266df633f",
+        "local_sha256": "8e5d83a010342961ce76dae5fad6f679f0c92a425c786a68e29fed7266df633f"
+      },
+      {
+        "local": "internal/norma/noa/tokenize_test.go",
+        "upstream": "noa/tokenize_test.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "2382878e919c735c3602619225dbdc106304b853392ef941a1b706851fddfb7e",
+        "local_sha256": "2382878e919c735c3602619225dbdc106304b853392ef941a1b706851fddfb7e"
+      },
+      {
+        "local": "internal/norma/noa/toolpairs.go",
+        "upstream": "noa/toolpairs.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "c4bfb83468fc90066c869fb41a68a702767ad5810ebb336d90a16abd41c74ba4",
+        "local_sha256": "c4bfb83468fc90066c869fb41a68a702767ad5810ebb336d90a16abd41c74ba4"
+      },
+      {
+        "local": "internal/norma/noa/toolpairs_test.go",
+        "upstream": "noa/toolpairs_test.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "9d460184f4ccd4af39df5b569ff7b4bb93ea9bf58b070875c09437925a887f36",
+        "local_sha256": "9d460184f4ccd4af39df5b569ff7b4bb93ea9bf58b070875c09437925a887f36"
+      },
+      {
+        "local": "internal/norma/noa/truncate.go",
+        "upstream": "noa/truncate.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "86957507d7956b517ee9c41d7951201c7e4d561d8d8fe0a297964ebf278ea0db",
+        "local_sha256": "86957507d7956b517ee9c41d7951201c7e4d561d8d8fe0a297964ebf278ea0db"
+      },
+      {
+        "local": "internal/norma/noa/truncate_test.go",
+        "upstream": "noa/truncate_test.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "3bb4cc49f25bddf757b546c38927c5ae5dc35daacaf6ccff1d2decf89216e5ce",
+        "local_sha256": "3bb4cc49f25bddf757b546c38927c5ae5dc35daacaf6ccff1d2decf89216e5ce"
+      },
+      {
+        "local": "internal/norma/noa/turnintegrity.go",
+        "upstream": "noa/turnintegrity.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "56011d44dec796d1f9f3abfc591333c2b445b5e39c6bdf3dc9dc43d886fc20e7",
+        "local_sha256": "56011d44dec796d1f9f3abfc591333c2b445b5e39c6bdf3dc9dc43d886fc20e7"
+      },
+      {
+        "local": "internal/norma/noa/types.go",
+        "upstream": "noa/types.go",
+        "exact_after_import_path_normalization": true,
+        "upstream_sha256": "d60f181672363443ba0907dc0f8efbb33c1e7760894ff2aecd4b27e21676b675",
+        "local_sha256": "d60f181672363443ba0907dc0f8efbb33c1e7760894ff2aecd4b27e21676b675"
+      }
+    ],
+    "compression_rule_matches": [
+      {
+        "revision": "96d111f2932fc99a7bd6d493a5866bb3c3392cb9",
+        "matched_rules": 1,
+        "total_rules": 4
+      },
+      {
+        "revision": "c89994ca2b2c7fb026f6c7f3c0fef39ee3b208f0",
+        "matched_rules": 1,
+        "total_rules": 4
+      },
+      {
+        "revision": "1eedab985789784ce8da262394f6763cf4d40479",
+        "matched_rules": 0,
+        "total_rules": 4
+      },
+      {
+        "revision": "da1b1feee37a0a43b9f943def4f568f36ad44498",
+        "matched_rules": 0,
+        "total_rules": 4
+      },
+      {
+        "revision": "f33bc8d11cac3c48561928bafdef7bb118f29ac9",
+        "matched_rules": 1,
+        "total_rules": 4
+      },
+      {
+        "revision": "10ab25a22385c867ee5befbfd2583eeea4f8de6c",
+        "matched_rules": 1,
+        "total_rules": 4
+      },
+      {
+        "revision": "df84c8d9f76f0a8b6d641fb5610e73c7295a8556",
+        "matched_rules": 1,
+        "total_rules": 4
+      },
+      {
+        "revision": "1c0e579a2b532bd952d2900c5ee1c2455051112a",
+        "matched_rules": 1,
+        "total_rules": 4
+      },
+      {
+        "revision": "116aa4d9caa9462ae5a724b2af9e4f2345a2fc44",
+        "matched_rules": 3,
+        "total_rules": 4
+      },
+      {
+        "revision": "17bf3fe05329246d114b9346eaa7ec136f06698f",
+        "matched_rules": 4,
+        "total_rules": 4
+      },
+      {
+        "revision": "1511309934b2192fa24ebafc8cbf2dd14d2807d5",
+        "matched_rules": 2,
+        "total_rules": 4
+      },
+      {
+        "revision": "6e010d504dbd4a0067408908e16797109c24d702",
+        "matched_rules": 2,
+        "total_rules": 4
+      },
+      {
+        "revision": "9747d18a6e3019617316141bc82fa744dc53c341",
+        "matched_rules": 1,
+        "total_rules": 4
+      }
+    ],
+    "compression_baseline": {
+      "repository": "acp",
+      "revision": "17bf3fe05329246d114b9346eaa7ec136f06698f",
+      "path": "src/compression-rules.ts",
+      "sha256": "e34129a5d23e0ea40ed194d15aa15b8b8267d5fbcd039e38e8bf73710835fb84",
+      "evidence": "provenance/acp-kernel-compression-rules.reference.ts"
+    }
+  },
+  "php2shell": {
+    "vendored_import_revision": "8ad1f47549123a2cc7cf21e378455e7ec8086a17",
+    "exact_file_count": 6,
+    "matching_revisions": [
+      "db8ff28fa6fc7d49b2207f7c988e08891d48bdf0",
+      "35c95e7eaa5cb878f72ac8acea168495815569b6"
+    ],
+    "selected_content_baseline": "db8ff28fa6fc7d49b2207f7c988e08891d48bdf0",
+    "files": [
+      {
+        "blob": "3223e07d8656cdc44f4fc80f1c8166337d276270",
+        "local": "scripts/poc/php2shell/README.upstream.md",
+        "upstream": "README.md"
+      },
+      {
+        "blob": "71a9820680f6cb7e2e3ad330bb7a12ccfcf3de0f",
+        "local": "scripts/poc/php2shell/docs/ANALYSIS.md",
+        "upstream": "docs/ANALYSIS.md"
+      },
+      {
+        "blob": "41d072d0ac11921d06736e8dba2d0e6054eebf09",
+        "local": "scripts/poc/php2shell/lab/setup.sh",
+        "upstream": "lab/setup.sh"
+      },
+      {
+        "blob": "4e5de16845de71f080c9593646d87741c182a7e5",
+        "local": "scripts/poc/php2shell/poc/verify_handler_mismatch.py",
+        "upstream": "poc/verify_handler_mismatch.py"
+      },
+      {
+        "blob": "7c7aaa133d74b0e991673ead3d94d480ce02eb40",
+        "local": "scripts/poc/php2shell/poc/verify_session_injection.py",
+        "upstream": "poc/verify_session_injection.py"
+      },
+      {
+        "blob": "80520f02a12e5874c5854d5804b608282b3a588b",
+        "local": "scripts/poc/php2shell/poc/verify_uaf_asan.php",
+        "upstream": "poc/verify_uaf_asan.php"
+      }
+    ],
+    "license": {
+      "repository": "php2shell",
+      "revision": "9127065d57bde22c2f7d854029cd3b05ae927d2e",
+      "path": "LICENSE",
+      "sha256": "9954f5bf4ef59b1c852f1779fa6ce55a47efe498c0e95f393d5466afe784b6fd",
+      "evidence": "provenance/php2shell-upstream-MIT.txt"
+    }
+  },
+  "aegis": {
+    "attribution_introduced": "9ad323dc4c625c26506c56d04734cd6289355262",
+    "reference_baseline": "f7aed12bab2f0c5533fb9ff951510231b5bf446b",
+    "baseline_reason": "Latest upstream ancestor before the dated ARTEX UI attribution; comparison reference, not a claim of exact copied revision",
+    "license": {
+      "repository": "aegis",
+      "revision": "f7aed12bab2f0c5533fb9ff951510231b5bf446b",
+      "path": "LICENSE",
+      "sha256": "5c2b4c076f881967f0572d0b5b2696a22dd328259adf094fa116a6bba49ce088",
+      "evidence": "provenance/AegisHook-reference-MIT.txt"
+    },
+    "reference_component": {
+      "repository": "aegis",
+      "revision": "f7aed12bab2f0c5533fb9ff951510231b5bf446b",
+      "path": "web/src/components/CallDetail.vue",
+      "sha256": "df56728883da347a0ca128d78ff76b118929e32e926f5e660b6deb9df9d28539",
+      "evidence": "provenance/AegisHook-CallDetail.reference.vue"
+    }
+  }
+}

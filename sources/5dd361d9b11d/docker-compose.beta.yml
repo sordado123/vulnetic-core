@@ -1,0 +1,68 @@
+name: vulnetic-beta
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: vulnetic
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set the dedicated database password}
+      POSTGRES_DB: vulnetic_beta
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U vulnetic -d vulnetic_beta"]
+      interval: 5s
+      timeout: 3s
+      retries: 15
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options: {max-size: "10m", max-file: "3"}
+  prepare:
+    profiles: [operator]
+    image: vulnetic-saas-beta:local
+    command: [-migrate-only, -data, /var/lib/vulnetic/data]
+    environment:
+      VULNETIC_SAAS_MODE: "true"
+      VULNETIC_STATE_DIR: /var/lib/vulnetic
+      VULNETIC_PG_DSN: postgres://vulnetic:${POSTGRES_PASSWORD}@postgres:5432/vulnetic_beta?sslmode=disable
+      VULNETIC_PG_APP_PASSWORD: ${POSTGRES_APP_PASSWORD:?Set the RLS application password}
+    volumes: [state:/var/lib/vulnetic]
+    depends_on:
+      postgres: {condition: service_healthy}
+    read_only: true
+    tmpfs: ["/tmp:size=64m,mode=1777"]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    restart: "no"
+  app:
+    image: vulnetic-saas-beta:local
+    build:
+      context: .
+      dockerfile: deploy/beta/Dockerfile
+    environment:
+      VULNETIC_SAAS_MODE: "true"
+      VULNETIC_STATE_DIR: /var/lib/vulnetic
+      VULNETIC_PG_DSN: postgres://vulnetic_app:${POSTGRES_APP_PASSWORD:?Set the RLS application password}@postgres:5432/vulnetic_beta?sslmode=disable
+      VULNETIC_PG_APP_PASSWORD: ${POSTGRES_APP_PASSWORD:?Set the RLS application password}
+      VULNETIC_SIGNUP_ALLOWLIST: ${VULNETIC_SIGNUP_ALLOWLIST:-}
+      VULNETIC_PUBLIC_SIGNUP: ${VULNETIC_PUBLIC_SIGNUP:-false}
+      VULNETIC_PUBLIC_URL: ${VULNETIC_PUBLIC_URL:-}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:${VULNETIC_BETA_PORT:-8795}:8787"
+    volumes:
+      - state:/var/lib/vulnetic
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options: {max-size: "10m", max-file: "3"}
+volumes:
+  postgres:
+  state:

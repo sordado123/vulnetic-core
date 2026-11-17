@@ -1,0 +1,16 @@
+{
+  "version": "1.1.5+e70e7e6dc6ab",
+  "source_revision": "e70e7e6dc6abb32262c1de28c984563ac45b6e8e",
+  "sha256": "aad9159adaa2a891d779880cacfa880f89a9385a6d5c360c6ec233055653608c",
+  "source_page_sha256": "14e01575734e79c24350ad6fae55e21bb4f4184d82b4454058d2ff2cf5900f14",
+  "only_application_changed": true,
+  "go": "1.26.3",
+  "node": "22.23.4",
+  "buildvcs": false,
+  "paid_llm_calls": 0,
+  "product_tests_run": false,
+  "frontend_build": "passed",
+  "go_build": "passed",
+  "gateway_rebuilt": false,
+  "agents_rebuilt": false
+}

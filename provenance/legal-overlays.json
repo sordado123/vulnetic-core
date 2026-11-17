@@ -1,0 +1,11 @@
+{
+  "purpose": "License/hosted-service clarification only",
+  "changed_files": [
+    "sources/5dd361d9b11d/web/src/app/(auth)/login/page.tsx",
+    "sources/83c2ce102c8a/web/src/app/(auth)/login/page.tsx",
+    "sources/f92615b76a05/web/src/app/(auth)/login/page.tsx"
+  ],
+  "syntax_checked": true,
+  "permission_logic_changed": false,
+  "production_changed": false
+}

@@ -1,0 +1,40 @@
+{
+  "agent-linux-amd64": {
+    "path": "dist/agents/linux-amd64",
+    "sha256": "86cf9ef1344aa172e338f30f1bd1656b21b771b3eb4a1441f383cd4de8dd6273",
+    "source_commit": "83c2ce102c8a397fc219fb90ba7ea1b9624ad71c"
+  },
+  "linux": {
+    "path": "dist/amd64/vulnetic",
+    "sha256": "a649466c671f8238908f34fc7fadd8d88faa95ade1384277d5bf5b9a87280625",
+    "source_commit": "5dd361d9b11da67b7afa3080b3c3c42cd1dcc8ae"
+  },
+  "windows": {
+    "path": "dist/windows/vulnetic.exe",
+    "sha256": "d1a98e0d13cb614bef7d3fcf6818f4f053c7eacabc8743f490b0ea96e591ea35",
+    "source_commit": "5dd361d9b11da67b7afa3080b3c3c42cd1dcc8ae"
+  },
+  "gateway-linux-amd64": {
+    "path": "dist/amd64/vulnetic-gateway",
+    "sha256": "be432d326a6af8629047237edb7dc3dee9a3f19f4591a64c6a6bfb06aa932383",
+    "source_commit": "5dd361d9b11da67b7afa3080b3c3c42cd1dcc8ae"
+  },
+  "agent-linux-arm64": {
+    "path": "dist/agents/linux-arm64",
+    "sha256": "a537e1176ba513984f59118feb64841bbcd62c186a29307d8318684e8c6f7fcd",
+    "source_commit": "83c2ce102c8a397fc219fb90ba7ea1b9624ad71c"
+  },
+  "proof-reconcile-linux-amd64": {
+    "path": "dist/amd64/vulnetic-proof-reconcile",
+    "sha256": "e023f982f571d0809d67da65d27cb5f185226c7e7383d6666846af2950c96235",
+    "source_commit": "f92615b76a05906bb50f6440b93848b88cb22587"
+  },
+  "agent-windows-amd64": {
+    "mode": "foreground",
+    "path": "dist/agents/windows-amd64.exe",
+    "authenticode": "NotSigned",
+    "version": "0.2.0-preview+git.83c2ce102c8a",
+    "sha256": "7223c7ab9f1ede07629174e81108f8020096dcb229c4cbf950bf610a6638088d",
+    "source_commit": "83c2ce102c8a397fc219fb90ba7ea1b9624ad71c"
+  }
+}

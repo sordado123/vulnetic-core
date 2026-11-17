@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/sordado123/vulnetic-core",
+  "source_release_tag": "source-2026-11-17",
+  "source_release_asset": "vulnetic-source-2026-11-17.zip",
+  "publication_approved": true,
+  "private_operational_repository": "not included",
+  "source_only": true,
+  "hosted_application_version": "1.1.5+e70e7e6dc6ab",
+  "hosted_application_revision": "e70e7e6dc6abb32262c1de28c984563ac45b6e8e",
+  "source_offer_url": "https://vulnetic.site/source/",
+  "agent_sources_revision": "83c2ce102c8a397fc219fb90ba7ea1b9624ad71c",
+  "production_activation": "pending verified application publication"
+}

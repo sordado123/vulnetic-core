@@ -1,0 +1,148 @@
+[
+  {
+    "recipe_id": "CVE-2021-41773",
+    "recipe_digest": "81025d62243e05a4d4912c84acfbc9d5a91ceace7cc7490d1cc133fd2b6a37f9",
+    "report_sha256": "d6b916c6fd9d4526b929f15d3db3108eef8e1781e3e9c6fafc47ef8476a5e822",
+    "cases": [
+      {
+        "expected": "vulnerable",
+        "version": "2.4.49",
+        "image_id": "sha256:58cfa94e883c14a5d0ad517477f6bfcfdc8a72211cff2a87f17185ffbeb9e1c2",
+        "isolated": true,
+        "canary_preserved": true,
+        "runs": [
+          {
+            "outcome": "reproduced",
+            "healthy": true,
+            "control_valid": true,
+            "boundary_protected": true,
+            "negative_clean": true,
+            "reproductions": 2
+          },
+          {
+            "outcome": "reproduced",
+            "healthy": true,
+            "control_valid": true,
+            "boundary_protected": true,
+            "negative_clean": true,
+            "reproductions": 2
+          },
+          {
+            "outcome": "reproduced",
+            "healthy": true,
+            "control_valid": true,
+            "boundary_protected": true,
+            "negative_clean": true,
+            "reproductions": 2
+          }
+        ]
+      },
+      {
+        "expected": "patched",
+        "version": "2.4.51",
+        "image_id": "sha256:dbc4af8aedcb708ce7c6d365237c5faed6a6ce8be7590d09e3b14c073f85ed27",
+        "isolated": true,
+        "canary_preserved": true,
+        "runs": [
+          {
+            "outcome": "not_reproduced",
+            "healthy": true,
+            "control_valid": true,
+            "boundary_protected": true,
+            "negative_clean": true,
+            "reproductions": 0
+          },
+          {
+            "outcome": "not_reproduced",
+            "healthy": true,
+            "control_valid": true,
+            "boundary_protected": true,
+            "negative_clean": true,
+            "reproductions": 0
+          },
+          {
+            "outcome": "not_reproduced",
+            "healthy": true,
+            "control_valid": true,
+            "boundary_protected": true,
+            "negative_clean": true,
+            "reproductions": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "recipe_id": "CVE-2021-42013",
+    "recipe_digest": "2640cf73435be91b4265f574dd4687a66b8171b816b80e848823f2ba55b639fa",
+    "report_sha256": "d6b916c6fd9d4526b929f15d3db3108eef8e1781e3e9c6fafc47ef8476a5e822",
+    "cases": [
+      {
+        "expected": "vulnerable",
+        "version": "2.4.50",
+        "image_id": "sha256:4aa79aff65e07f06f4c3458190a9b127897e7ae9c72c712ed7636b3ee0b74591",
+        "isolated": true,
+        "canary_preserved": true,
+        "runs": [
+          {
+            "outcome": "reproduced",
+            "healthy": true,
+            "control_valid": true,
+            "boundary_protected": true,
+            "negative_clean": true,
+            "reproductions": 2
+          },
+          {
+            "outcome": "reproduced",
+            "healthy": true,
+            "control_valid": true,
+            "boundary_protected": true,
+            "negative_clean": true,
+            "reproductions": 2
+          },
+          {
+            "outcome": "reproduced",
+            "healthy": true,
+            "control_valid": true,
+            "boundary_protected": true,
+            "negative_clean": true,
+            "reproductions": 2
+          }
+        ]
+      },
+      {
+        "expected": "patched",
+        "version": "2.4.51",
+        "image_id": "sha256:ffce3c3fc5e721c24ef975bdf93d3accded6373cb9fdb1e5e75cb480f3807721",
+        "isolated": true,
+        "canary_preserved": true,
+        "runs": [
+          {
+            "outcome": "not_reproduced",
+            "healthy": true,
+            "control_valid": true,
+            "boundary_protected": true,
+            "negative_clean": true,
+            "reproductions": 0
+          },
+          {
+            "outcome": "not_reproduced",
+            "healthy": true,
+            "control_valid": true,
+            "boundary_protected": true,
+            "negative_clean": true,
+            "reproductions": 0
+          },
+          {
+            "outcome": "not_reproduced",
+            "healthy": true,
+            "control_valid": true,
+            "boundary_protected": true,
+            "negative_clean": true,
+            "reproductions": 0
+          }
+        ]
+      }
+    ]
+  }
+]

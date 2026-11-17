@@ -1,0 +1,8 @@
+{
+  "product_name": "Vulnetic Executor",
+  "file_name": "VulneticExecutor.exe",
+  "description": "Temporary foreground remote command executor for Vulnetic security workspaces",
+  "brand": "Vulnetic",
+  "version": "0.2.0-preview",
+  "file_version": [0, 2, 0, 0]
+}

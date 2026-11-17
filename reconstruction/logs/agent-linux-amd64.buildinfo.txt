@@ -1,0 +1,12 @@
+<BUILD_ROOT>/artifacts/VulneticExecutor-linux-amd64: go1.26.3
+	path	github.com/sordado123/vulnetic/cmd/vulnetic-agent
+	mod	github.com/sordado123/vulnetic	(devel)	
+	dep	github.com/gorilla/websocket	v1.5.3	h1:saDtZ6Pbx/0u+bgYQ3q96pZgCzfhKXGPqt7kZ72aNNg=
+	dep	golang.org/x/crypto	v0.55.0	h1:+KWHjbgOaAQ66dh/YlkZKHlz9ZUlq61AFirAR9ntP8M=
+	build	-buildmode=exe
+	build	-compiler=gc
+	build	-trimpath=true
+	build	CGO_ENABLED=0
+	build	GOARCH=amd64
+	build	GOOS=linux
+	build	GOAMD64=v1

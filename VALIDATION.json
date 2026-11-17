@@ -1,0 +1,27 @@
+{
+  "prepared": "2026-11-17",
+  "private": true,
+  "publication_approved": false,
+  "scope": "core-and-agent-source-only",
+  "snapshots": 3,
+  "required_source_files": 3015,
+  "required_source_coverage": true,
+  "scoped_tracked_input_coverage": true,
+  "restored_source_and_installation_inputs": 30,
+  "changed_runtime_permission_files": 0,
+  "legal_copy_changes": [
+    "sources/5dd361d9b11d/web/src/app/(auth)/login/page.tsx",
+    "sources/83c2ce102c8a/web/src/app/(auth)/login/page.tsx",
+    "sources/f92615b76a05/web/src/app/(auth)/login/page.tsx"
+  ],
+  "go_source_archives": 52,
+  "go_h1_and_sha256_verified": true,
+  "go_retained_notice_entries": 74,
+  "go_public_binary_fixtures": 1,
+  "npm_entries": 588,
+  "npm_bundled_entries": 6,
+  "official_registry_mirror_equivalents_verified": 85,
+  "product_binaries": 0,
+  "source_offer": "prepared-private-not-activated",
+  "runtime_tests": "not run for license-only changes"
+}

@@ -1,0 +1,155 @@
+{
+  "reason": "Complete original scoped tracked source and generic installation inputs omitted by the earlier extension allowlist. No runtime logic changed.",
+  "files": [
+    {
+      "path": "sources/5dd361d9b11d/.dockerignore",
+      "source_revision": "5dd361d9b11da67b7afa3080b3c3c42cd1dcc8ae",
+      "sha256": "c606f2a47ba94b5511c78b1f7587c5d987d612f068f3d176ef8afb19cbcd2a7f"
+    },
+    {
+      "path": "sources/5dd361d9b11d/deploy/beta/.env.example",
+      "source_revision": "5dd361d9b11da67b7afa3080b3c3c42cd1dcc8ae",
+      "sha256": "7fe318db589160cc79de2bc7539bdf6bc73ea94466f5f43bf7c793a30888f78b"
+    },
+    {
+      "path": "sources/5dd361d9b11d/deploy/beta/vulnetic-firewall.service",
+      "source_revision": "5dd361d9b11da67b7afa3080b3c3c42cd1dcc8ae",
+      "sha256": "69e9a5c84d225bf66c26e7e6a356898ff4eaba8ac08708a7e5181b627294e663"
+    },
+    {
+      "path": "sources/5dd361d9b11d/deploy/beta/vulnetic-monitor.logrotate",
+      "source_revision": "5dd361d9b11da67b7afa3080b3c3c42cd1dcc8ae",
+      "sha256": "851ecbad79e41e04477860205f1c9457dd93636c64f6e157f3f3792072858d6c"
+    },
+    {
+      "path": "sources/5dd361d9b11d/deploy/beta/vulnetic-monitor.service",
+      "source_revision": "5dd361d9b11da67b7afa3080b3c3c42cd1dcc8ae",
+      "sha256": "ce891644d5ad37dc736a040fac0e3075fdd7f5cc760940798c75e8ea70ae9fec"
+    },
+    {
+      "path": "sources/5dd361d9b11d/scripts/poc/php2shell/poc/verify_uaf_asan.php",
+      "source_revision": "5dd361d9b11da67b7afa3080b3c3c42cd1dcc8ae",
+      "sha256": "db27162deaa5269547a262be082201938c7757260dea1749cb6088ac50e2bf28"
+    },
+    {
+      "path": "sources/5dd361d9b11d/status.bat",
+      "source_revision": "5dd361d9b11da67b7afa3080b3c3c42cd1dcc8ae",
+      "sha256": "5150ddfff64b856f84ac61ffb5e73913f5c21daedeebe0f944b0dce7b12c3ba6"
+    },
+    {
+      "path": "sources/5dd361d9b11d/stop.bat",
+      "source_revision": "5dd361d9b11da67b7afa3080b3c3c42cd1dcc8ae",
+      "sha256": "702e9b3d2e78c6cb1d9b7b34a571ad7a98ccf7a9ea3480273c3f4b2cb79d0286"
+    },
+    {
+      "path": "sources/5dd361d9b11d/web/.gitignore",
+      "source_revision": "5dd361d9b11da67b7afa3080b3c3c42cd1dcc8ae",
+      "sha256": "9e49661e9eb425ef1361f3dd3d945c6ba5a68bcea78e69c6792d266b8b169c0c"
+    },
+    {
+      "path": "sources/5dd361d9b11d/web/.husky/pre-commit",
+      "source_revision": "5dd361d9b11da67b7afa3080b3c3c42cd1dcc8ae",
+      "sha256": "fea919a1e61a1308a252351a308c1cf1e52a2baa85646c3d698b9709ab472bb7"
+    },
+    {
+      "path": "sources/83c2ce102c8a/.dockerignore",
+      "source_revision": "83c2ce102c8a397fc219fb90ba7ea1b9624ad71c",
+      "sha256": "c606f2a47ba94b5511c78b1f7587c5d987d612f068f3d176ef8afb19cbcd2a7f"
+    },
+    {
+      "path": "sources/83c2ce102c8a/deploy/beta/.env.example",
+      "source_revision": "83c2ce102c8a397fc219fb90ba7ea1b9624ad71c",
+      "sha256": "e0d4fd58a882c1cc9a3cba63dd88652e60f7e175ffef8966c751a327fae22ac4"
+    },
+    {
+      "path": "sources/83c2ce102c8a/deploy/beta/vulnetic-firewall.service",
+      "source_revision": "83c2ce102c8a397fc219fb90ba7ea1b9624ad71c",
+      "sha256": "69e9a5c84d225bf66c26e7e6a356898ff4eaba8ac08708a7e5181b627294e663"
+    },
+    {
+      "path": "sources/83c2ce102c8a/deploy/beta/vulnetic-monitor.logrotate",
+      "source_revision": "83c2ce102c8a397fc219fb90ba7ea1b9624ad71c",
+      "sha256": "851ecbad79e41e04477860205f1c9457dd93636c64f6e157f3f3792072858d6c"
+    },
+    {
+      "path": "sources/83c2ce102c8a/deploy/beta/vulnetic-monitor.service",
+      "source_revision": "83c2ce102c8a397fc219fb90ba7ea1b9624ad71c",
+      "sha256": "ce891644d5ad37dc736a040fac0e3075fdd7f5cc760940798c75e8ea70ae9fec"
+    },
+    {
+      "path": "sources/83c2ce102c8a/scripts/poc/php2shell/poc/verify_uaf_asan.php",
+      "source_revision": "83c2ce102c8a397fc219fb90ba7ea1b9624ad71c",
+      "sha256": "db27162deaa5269547a262be082201938c7757260dea1749cb6088ac50e2bf28"
+    },
+    {
+      "path": "sources/83c2ce102c8a/status.bat",
+      "source_revision": "83c2ce102c8a397fc219fb90ba7ea1b9624ad71c",
+      "sha256": "5150ddfff64b856f84ac61ffb5e73913f5c21daedeebe0f944b0dce7b12c3ba6"
+    },
+    {
+      "path": "sources/83c2ce102c8a/stop.bat",
+      "source_revision": "83c2ce102c8a397fc219fb90ba7ea1b9624ad71c",
+      "sha256": "702e9b3d2e78c6cb1d9b7b34a571ad7a98ccf7a9ea3480273c3f4b2cb79d0286"
+    },
+    {
+      "path": "sources/83c2ce102c8a/web/.gitignore",
+      "source_revision": "83c2ce102c8a397fc219fb90ba7ea1b9624ad71c",
+      "sha256": "9e49661e9eb425ef1361f3dd3d945c6ba5a68bcea78e69c6792d266b8b169c0c"
+    },
+    {
+      "path": "sources/83c2ce102c8a/web/.husky/pre-commit",
+      "source_revision": "83c2ce102c8a397fc219fb90ba7ea1b9624ad71c",
+      "sha256": "fea919a1e61a1308a252351a308c1cf1e52a2baa85646c3d698b9709ab472bb7"
+    },
+    {
+      "path": "sources/f92615b76a05/.dockerignore",
+      "source_revision": "f92615b76a05906bb50f6440b93848b88cb22587",
+      "sha256": "c606f2a47ba94b5511c78b1f7587c5d987d612f068f3d176ef8afb19cbcd2a7f"
+    },
+    {
+      "path": "sources/f92615b76a05/deploy/beta/.env.example",
+      "source_revision": "f92615b76a05906bb50f6440b93848b88cb22587",
+      "sha256": "e0d4fd58a882c1cc9a3cba63dd88652e60f7e175ffef8966c751a327fae22ac4"
+    },
+    {
+      "path": "sources/f92615b76a05/deploy/beta/vulnetic-firewall.service",
+      "source_revision": "f92615b76a05906bb50f6440b93848b88cb22587",
+      "sha256": "69e9a5c84d225bf66c26e7e6a356898ff4eaba8ac08708a7e5181b627294e663"
+    },
+    {
+      "path": "sources/f92615b76a05/deploy/beta/vulnetic-monitor.logrotate",
+      "source_revision": "f92615b76a05906bb50f6440b93848b88cb22587",
+      "sha256": "851ecbad79e41e04477860205f1c9457dd93636c64f6e157f3f3792072858d6c"
+    },
+    {
+      "path": "sources/f92615b76a05/deploy/beta/vulnetic-monitor.service",
+      "source_revision": "f92615b76a05906bb50f6440b93848b88cb22587",
+      "sha256": "ce891644d5ad37dc736a040fac0e3075fdd7f5cc760940798c75e8ea70ae9fec"
+    },
+    {
+      "path": "sources/f92615b76a05/scripts/poc/php2shell/poc/verify_uaf_asan.php",
+      "source_revision": "f92615b76a05906bb50f6440b93848b88cb22587",
+      "sha256": "db27162deaa5269547a262be082201938c7757260dea1749cb6088ac50e2bf28"
+    },
+    {
+      "path": "sources/f92615b76a05/status.bat",
+      "source_revision": "f92615b76a05906bb50f6440b93848b88cb22587",
+      "sha256": "5150ddfff64b856f84ac61ffb5e73913f5c21daedeebe0f944b0dce7b12c3ba6"
+    },
+    {
+      "path": "sources/f92615b76a05/stop.bat",
+      "source_revision": "f92615b76a05906bb50f6440b93848b88cb22587",
+      "sha256": "702e9b3d2e78c6cb1d9b7b34a571ad7a98ccf7a9ea3480273c3f4b2cb79d0286"
+    },
+    {
+      "path": "sources/f92615b76a05/web/.gitignore",
+      "source_revision": "f92615b76a05906bb50f6440b93848b88cb22587",
+      "sha256": "9e49661e9eb425ef1361f3dd3d945c6ba5a68bcea78e69c6792d266b8b169c0c"
+    },
+    {
+      "path": "sources/f92615b76a05/web/.husky/pre-commit",
+      "source_revision": "f92615b76a05906bb50f6440b93848b88cb22587",
+      "sha256": "fea919a1e61a1308a252351a308c1cf1e52a2baa85646c3d698b9709ab472bb7"
+    }
+  ]
+}

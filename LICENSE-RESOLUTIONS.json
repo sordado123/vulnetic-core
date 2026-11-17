@@ -1,0 +1,74 @@
+{
+  "private": true,
+  "publication_approved": false,
+  "profile": "source-only",
+  "go_modules": 52,
+  "npm_lock_entries": 588,
+  "shipped_product_binaries": 0,
+  "shipped_container_images": 0,
+  "shipped_npm_archives": 0,
+  "shipped_node_modules": 0,
+  "resolutions": [
+    {
+      "item": "AGPL/ARTEX",
+      "state": "prepared",
+      "resolution": "Complete application/frontend, account isolation, protections and agent source trees preserved. No proprietary carve-out is claimed. Per-version source mapping and a source-offer publication kit are included. Actual hosting and prominent integration require the separately approved release. Login legal copy clarified: software license rights are not restricted by hosted-service terms. Access-control and authorization logic are unchanged."
+    },
+    {
+      "item": "Norma",
+      "state": "resolved-for-source-package",
+      "resolution": "Apache license and upstream notices preserved; local modifications marked. Verified v0.4.4 baseline and local file comparisons retained."
+    },
+    {
+      "item": "NOA/acp-kernel",
+      "state": "resolved-conservatively-for-source-package",
+      "resolution": "Historical MIT license and later attribution text both retained. Visible acp-kernel credit with upstream link is included in the source offer, README and notices. Exact original working checkout is unknown and is not claimed. No relicensing of upstream code."
+    },
+    {
+      "item": "php2shell",
+      "state": "resolved-for-source-package",
+      "resolution": "Six original content blobs verified against two equivalent upstream subset trees; official upstream MIT text and copyright restored. Both possible revisions documented. No runtime PoC is executed or separately packaged."
+    },
+    {
+      "item": "AegisHook",
+      "state": "resolved-conservatively-for-source-package",
+      "resolution": "MIT license and copyright included for any adapted material; pinned comparison source and hash included. No assertion that React is a literal Vue copy or that a unique original checkout was recovered."
+    },
+    {
+      "item": "Go dependency source",
+      "state": "resolved-for-source-package",
+      "resolution": "All 52 declared module archives included with locked h1 sums, archive hashes, original nested license and notice files. Linked dependency versions matched historical binary metadata in the prior independent build."
+    },
+    {
+      "item": "npm",
+      "state": "resolved-by-source-only-distribution-boundary",
+      "resolution": "Both unchanged lockfiles and 588 exact registry locators/integrities supplied. No npm package archive, node_modules, native library or generated JS bundle is redistributed here. Existing 481 available notices retained. This does not clear a future compiled frontend or native package distribution."
+    },
+    {
+      "item": "MPL/LGPL",
+      "state": "not-redistributed-in-this-profile",
+      "resolution": "lightningcss and sharp/libvips native packages are external build dependencies, not shipped source changes or native binaries in this package. Versions, source locators and license expressions retained. A future distribution containing those libraries requires its own corresponding-source/relinking and notice review."
+    },
+    {
+      "item": "Fonts/frontend base/shadcn/assets",
+      "state": "resolved-for-incorporated-source",
+      "resolution": "Frontend MIT and shadcn MIT notices retained. Geist OFL text and copyright retained; font binaries are obtained from the external locked geist package and are not included separately in this source package. Future generated font assets retain OFL terms. External CC-BY/CC0 metadata and notices preserved."
+    },
+    {
+      "item": "External toolbox/container/labs",
+      "state": "outside-final-distribution",
+      "resolution": "Historical recipes remain as source reference, with an explicit no-container/no-third-party-tool-binary scope. No image, OS package, external tool checkout, browser or lab image is distributed or cleared here."
+    }
+  ],
+  "release_activation": [
+    "Obtain explicit publication approval.",
+    "Host the complete core-and-agent source archive and SHA256 file at the locations used by publication/index.html.",
+    "Add the Source & credits link prominently in the deployed app UI and verify downloads before announcing the release.",
+    "If publishing new binaries, frontend bundles or container images, close their artifact-specific licensing review first."
+  ],
+  "historical_limits": [
+    "The acp-kernel original complete working checkout and AegisHook consulted checkout remain unknown. Verified baselines are not fabricated checkout identities.",
+    "The two php2shell candidate trees have identical imported content. This ambiguity does not change the preserved content or restored MIT terms.",
+    "No byte-identical historical binary reproduction is claimed."
+  ]
+}
