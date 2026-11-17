@@ -53,23 +53,24 @@ ARTEX established the multi-agent foundation. Vulnetic develops that foundation 
 ```mermaid
 flowchart TB
   subgraph SETUP["01 · Define the work"]
+    direction LR
     C["Chat · authorized scope"] --> T["Task · model profile · executor"]
   end
   subgraph EXECUTION["02 · Execute and collect"]
+    direction LR
     P["Planner · goals and workers"] --> W["Workers · tools on your executor"]
     W --> E["Evidence · task and execution provenance"]
     E --> F["Candidate finding"]
   end
   subgraph REVIEW["03 · Review and deliver"]
+    direction LR
     H{"Human review"} -->|Accepted| R["Report · reviewed findings and evidence"]
     H -->|Needs more evidence| N["Continue investigation"]
     R --> X["Retest · new execution, original proof retained"]
     X --> O["Retest outcome · fixed, persists or inconclusive"]
   end
-  T --> P
-  F --> H
-  N --> W
-  X -.-> E
+  SETUP --> EXECUTION --> REVIEW
+  REVIEW -.->|"More evidence / retest"| EXECUTION
   classDef work fill:#eef2f6,stroke:#64748b,color:#20242b
   classDef evidence fill:#eaf5f1,stroke:#39947b,color:#163c32
   classDef review fill:#fff6e5,stroke:#c6983a,color:#574013
