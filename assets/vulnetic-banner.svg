@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 360" role="img" aria-labelledby="title desc">
+<title id="title">Vulnetic — ARTEX-based security workspace</title><desc id="desc">Open-source security workspace. Your executor, traceable evidence and human review.</desc>
+<rect width="1280" height="360" rx="20" fill="#171c24"/><path d="M720 0v360" stroke="#343d4b"/>
+<g font-family="Geist,Inter,Arial,sans-serif"><rect x="48" y="42" width="44" height="44" rx="11" fill="#f8f9fb"/><path d="m59 55 11 20 11-20M65 55h13" fill="none" stroke="#20242b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="108" y="70" fill="#b6c3d6" font-size="14" letter-spacing="2">OPEN SOURCE · BUILT ON ARTEX</text>
+<text x="44" y="177" fill="#f8f9fb" font-size="88" font-weight="650" letter-spacing="-4">Vulnetic</text>
+<text x="48" y="224" fill="#e4e9f0" font-size="23">Your executor. Traceable evidence.</text><text x="48" y="258" fill="#e4e9f0" font-size="23">Human review.</text>
+<text x="48" y="319" fill="#94a3b8" font-size="14">GO / NEXT.JS / POSTGRESQL + RLS / LINUX + WINDOWS</text>
+<g fill="none" stroke="#698779" stroke-width="2"><path d="M908 107v42m0 64v42m128 32h28"/><path d="m903 142 5 7 5-7m-10 106 5 7 5-7m144 27 7 5-7 5"/></g>
+<g fill="#222b36" stroke="#455268"><rect x="780" y="43" width="256" height="64" rx="10"/><rect x="780" y="149" width="256" height="64" rx="10"/><rect x="780" y="255" width="256" height="64" rx="10"/><rect x="1064" y="255" width="160" height="64" rx="10" fill="#223b33" stroke="#547e6e"/></g>
+<g fill="#f8f9fb" font-size="17" text-anchor="middle"><text x="908" y="70">Authorized scope</text><text x="908" y="91" fill="#a8b6c9" font-size="12">Chat → task</text><text x="908" y="176">Your execution machine</text><text x="908" y="197" fill="#a8b6c9" font-size="12">Outbound · unprivileged · expiring</text><text x="908" y="282">Evidence + human review</text><text x="908" y="303" fill="#a8b6c9" font-size="12">Keep the origin of each result</text><text x="1144" y="282">Report + retest</text><text x="1144" y="303" fill="#b2d3c4" font-size="12">Preserve the history</text></g></g></svg>

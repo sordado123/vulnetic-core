@@ -26241,6 +26241,11 @@
       "path": "assets/findings.jpg",
       "bytes": 147813,
       "sha256": "cd7a6e91a0bfc4b81a697eb75eb5fbf057dae64021b2b82b5d74812b433f9371"
+    },
+    {
+      "path": "assets/vulnetic-banner.svg",
+      "bytes": 2149,
+      "sha256": "68d59a3e396b99e2f039d1fa7ed619606840f417684f1bc5a6f72c55e5b1e90a"
     }
   ]
 }
