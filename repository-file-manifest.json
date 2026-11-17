@@ -2594,8 +2594,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 12124,
-      "sha256": "4ea171260f49d7546b40f3796cc943a8e76f76390c764528ea5f086f99fb20ff"
+      "bytes": 11925,
+      "sha256": "58f978f6fe85aa6687e0946601a1f394f208cf86c7695fbbfc5b3afaf1ade549"
     },
     {
       "path": "reconstruction/frontend-files.json",

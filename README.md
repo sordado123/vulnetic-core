@@ -86,29 +86,29 @@ The model proposes actions. Application code enforces ownership, execution permi
 The workspace coordinates the assessment. Your executor runs customer tools. A separate gateway handles the agent connection, while account permissions and execution policy stay in application code.
 
 ```mermaid
-flowchart TB
-  U["Security professional"] --> UI["Next.js workspace\nChat · Tasks · Findings · Reports"]
+flowchart LR
+  U["Security professional"] --> UI["Next.js workspace"]
   subgraph PLATFORM["Vulnetic platform"]
-    API["Go application\nAuthenticated API · streams"]
-    POLICY["Account ownership and mandatory policy"]
-    ENGINE["Task engine\nGoals · planner · workers · reporter"]
-    DB[("PostgreSQL + RLS\nAccount-scoped records and provenance")]
-    GW["Isolated agent gateway\nConnection protocol and sessions"]
+    API["Go API<br/>Streams"]
+    POLICY["Account ownership<br/>Mandatory policy"]
+    ENGINE["Task engine<br/>Planner · workers · reporter"]
+    DB[("PostgreSQL + RLS<br/>Records and provenance")]
+    GW["Isolated gateway<br/>Agent sessions"]
     API --> POLICY
     POLICY --> ENGINE
     API --> DB
     ENGINE --> DB
-    ENGINE <-->|"Private authenticated control channel"| GW
+    ENGINE <-->|"Authenticated control"| GW
   end
   subgraph CUSTOMER["Your execution machine"]
-    AGENT["Linux agent / Windows terminal\nUnprivileged OS user · absolute expiry"]
-    TOOLS["Bash / scripts · custom tools · MCP\nTemporary uploaded files"]
+    AGENT["Linux / Windows agent<br/>Non-root · fixed expiry"]
+    TOOLS["Tools · scripts · MCP<br/>Temporary uploads"]
     AGENT --> TOOLS
   end
   UI --> API
-  AGENT -->|"Outbound agent connection"| GW
-  TOOLS -->|"Within authorized scope"| TARGET["Your authorized targets"]
-  TOOLS -->|"Configured remote model requests"| LLM["Your LLM provider"]
+  AGENT -->|"Outbound connection"| GW
+  TOOLS -->|"Authorized scope"| TARGET["Your targets"]
+  TOOLS -->|"Remote requests"| LLM["Your LLM provider"]
   classDef app fill:#eef2f6,stroke:#64748b,color:#20242b
   classDef remote fill:#eaf5f1,stroke:#39947b,color:#163c32
   class UI,API,POLICY,ENGINE,DB,GW app
