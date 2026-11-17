@@ -5,14 +5,17 @@
   "publication_approved": true,
   "private_operational_repository": "not included",
   "source_only": true,
-  "hosted_application_version": "1.1.5+e70e7e6dc6ab",
-  "hosted_application_revision": "e70e7e6dc6abb32262c1de28c984563ac45b6e8e",
+  "hosted_application_version": "1.1.6+06a2656006f3",
+  "hosted_application_revision": "06a2656006f3688c007eef28b26fbdde576cd476",
   "source_offer_url": "https://vulnetic.site/source/",
   "agent_sources_revision": "83c2ce102c8a397fc219fb90ba7ea1b9624ad71c",
   "production_activation": "verified",
-  "verified_at": "2026-11-17T12:58:49.560925-03:00",
+  "verified_at": "2026-11-17T18:53:07.233Z",
   "source_archive_sha256": "082f18ff20fdf0e3062a8068eef4e58d6c9d6c58e423b5655915d2dcda76a4c5",
   "application_only_update": true,
   "gateway_and_agents_unchanged": true,
-  "operator_repositories_remain_private": true
+  "operator_repositories_remain_private": true,
+  "hosted_source_directory": "sources/06a2656006f3",
+  "hosted_binary_sha256": "8da99625a56e6cf2c38191485b8d033fd5b80d5cf174dc7b6d6b236e8dc1636d",
+  "hosted_ui_update": "Compact chat and responsive navigation; source release ZIP remains historical."
 }

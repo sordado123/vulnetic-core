@@ -139,7 +139,7 @@ This repository is a source release. It contains complete versioned module trees
 
 | Component | Source directory |
 | --- | --- |
-| Current hosted application 1.1.5+e70e7e6dc6ab | [sources/e70e7e6dc6ab](sources/e70e7e6dc6ab) |
+| Current hosted application 1.1.6+06a2656006f3 | [sources/06a2656006f3](sources/06a2656006f3) |
 | Historical application, frontend and gateway baseline | [sources/5dd361d9b11d](sources/5dd361d9b11d) |
 | Linux/Windows executor and shared packages | [sources/83c2ce102c8a](sources/83c2ce102c8a) |
 | Proof reconciler | [sources/f92615b76a05](sources/f92615b76a05) |
@@ -155,6 +155,8 @@ git clone https://github.com/sordado123/vulnetic-core.git
 cd vulnetic-core
 pwsh ./reconstruction/rebuild.ps1 -WorkDirectory C:\vulnetic-build
 ```
+
+The recorded reconstruction recipe targets the historical source-offer revision `e70e7e6dc6ab`. The latest hosted UI is in `sources/06a2656006f3`; its frontend and Linux application were compiled for this update, without rerunning the complete historical reconstruction.
 
 The build directory must not already exist. The recipe fetches locked dependencies and builds locally; it does not start an executor, create a customer account or deploy the hosted service. See [DEPENDENCIES.md](DEPENDENCIES.md) and [the recorded independent build](reconstruction/results.json).
 
