@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/vulnetic-banner.svg" alt="Vulnetic — ARTEX-based security workspace. From scope to evidence." width="100%"></p>
+<p align="center"><img src="assets/vulnetic-header.svg" alt="Vulnetic — ARTEX-based security workspace. From scope to evidence." width="100%"></p>
 
 # Vulnetic — ARTEX-based Security Workspace
 

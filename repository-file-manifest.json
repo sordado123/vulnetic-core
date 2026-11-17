@@ -8,7 +8,7 @@
       "sha256": "5f8ac6386a8eeff2b428e9f7d2778268651bae7f0b0e2def6cdbc4f565e99b60"
     },
     {
-      "path": "assets/vulnetic-banner.svg",
+      "path": "assets/vulnetic-header.svg",
       "bytes": 2149,
       "sha256": "68d59a3e396b99e2f039d1fa7ed619606840f417684f1bc5a6f72c55e5b1e90a"
     },
@@ -2595,7 +2595,7 @@
     {
       "path": "README.md",
       "bytes": 11925,
-      "sha256": "58f978f6fe85aa6687e0946601a1f394f208cf86c7695fbbfc5b3afaf1ade549"
+      "sha256": "9875c24bfd8ac2a9cd09875d68b90463cd306a67c372b336a99e3d49c6004404"
     },
     {
       "path": "reconstruction/frontend-files.json",
