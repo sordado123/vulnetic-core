@@ -1,5 +1,5 @@
 {
-  "purpose": "public-source-release",
+  "purpose": "public-source-repository",
   "publication_approved": true,
   "files": [
     {
@@ -26,6 +26,11 @@
       "path": "CONTRIBUTING.md",
       "bytes": 753,
       "sha256": "8d0461281d35df5fecce0347457f903428cc584cb688ac4937ab484d1dde1431"
+    },
+    {
+      "path": "COPYRIGHT.md",
+      "bytes": 998,
+      "sha256": "07d67de6256b280716e210680f5a29fabf5ddfd535ceb49c2e2978dc360387ee"
     },
     {
       "path": "CREDITS.md",
@@ -2449,8 +2454,8 @@
     },
     {
       "path": "LICENSE",
-      "bytes": 35921,
-      "sha256": "0ff26df8deb672eb9c01c238e2914c4ee79494ce6604fe6888d8816871cb1acc"
+      "bytes": 35164,
+      "sha256": "d5e096e27efb1946fcf97d993bb38c817cbe4c2e5fa12151245a7fb2760c9043"
     },
     {
       "path": "LICENSE-RESOLUTIONS.json",
@@ -2584,8 +2589,8 @@
     },
     {
       "path": "PUBLICATION.json",
-      "bytes": 606,
-      "sha256": "315119bc86dc44d95e8b6afe0ebf59f6891701211996a2fed9039abe9bddde50"
+      "bytes": 845,
+      "sha256": "81d1ac9d53a0225b0de2ff0b2d252a0c2874939d76d7e1a099018fc0e0b57f91"
     },
     {
       "path": "README.md",
