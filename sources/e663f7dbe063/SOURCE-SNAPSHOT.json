@@ -1,0 +1,7 @@
+{
+  "original_revision": "e663f7dbe063cc04b326ab053029bf06cc665df9",
+  "legal_changes": "Preserves the reviewed legal overlay from 06a2656006f3. Adds account-scoped executor research, encrypted chat credentials, gateway credential forwarding and operator notifications. No new dependencies.",
+  "excluded": "Git history, operational documents, local configurations, keys, databases, logs, generated binaries and runtime artifacts.",
+  "reconstruction": "Static frontend, Linux application and gateway compiled from this exported snapshot. Installed executor binaries and their deadlines are unchanged. Test suites were not run for this release.",
+  "license_resolution": "See ../../LICENSE-RESOLUTIONS.json; source-only final review profile; runtime behavior unchanged."
+}

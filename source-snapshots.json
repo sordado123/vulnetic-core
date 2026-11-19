@@ -50,5 +50,12 @@
     "role": "Compact chat frontend update",
     "base_revision": "e70e7e6dc6abb32262c1de28c984563ac45b6e8e",
     "legal_overlay": "Same reviewed legal overlay; five frontend presentation changes only."
+  },
+  {
+    "source_revision": "e663f7dbe063cc04b326ab053029bf06cc665df9",
+    "directory": "sources/e663f7dbe063",
+    "role": "Executor research, chat credentials, gateway delivery and operator notifications",
+    "base_revision": "06a2656006f3688c007eef28b26fbdde576cd476",
+    "legal_overlay": "Preserves the reviewed notices and license overlay. No dependencies added."
   }
 ]
