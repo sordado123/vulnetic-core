@@ -71,5 +71,12 @@
     "role": "Restored sent-message background with selection retained",
     "base_revision": "ccc9d8bbb12488a761500af80e2a83ec902d5275",
     "legal_overlay": "Same reviewed legal overlay; two frontend files restore message color while retaining selection, paragraphs and copying."
+  },
+  {
+    "source_revision": "a7397fe9cbfeafb327f76963ad3921e5b59e3d03",
+    "directory": "sources/a7397fe9cbfe",
+    "role": "Scoped operator-assisted authentication and manual input",
+    "base_revision": "09eaa4ddd53c51097ab380e5611938e6a7b5d7c0",
+    "legal_overlay": "Same reviewed legal overlay; no new dependencies, customer data, operational history, gateway or executor binaries."
   }
 ]

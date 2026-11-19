@@ -1,0 +1,7 @@
+{
+  "original_revision": "a7397fe9cbfeafb327f76963ad3921e5b59e3d03",
+  "legal_changes": "Preserves the reviewed legal overlay of 09eaa4ddd53c. Adds operator-assisted authentication and scoped ephemeral input without new dependencies or agent/gateway changes.",
+  "excluded": "Git history, operational documents, local configurations, keys, databases, logs, generated binaries and runtime artifacts.",
+  "reconstruction": "Static frontend and Linux application compiled from this exported snapshot. Focused pure tests and synthetic browser preview only; PostgreSQL/executor authentication integration remains pending. No external CI or paid model calls.",
+  "license_resolution": "Reviewed license/provenance resolutions retained; no new dependencies. See ../../LICENSE-RESOLUTIONS.json."
+}

@@ -4,6 +4,7 @@ This public source release covers the historical artifacts listed in binary-sour
 
 | Component | Source revision | Location |
 | --- | --- | --- |
+| Operator input application 1.1.10+a7397fe9cbfe | a7397fe9cbfeafb327f76963ad3921e5b59e3d03 | [sources/a7397fe9cbfe](sources/a7397fe9cbfe) |
 | Message background application 1.1.9+09eaa4ddd53c | 09eaa4ddd53c51097ab380e5611938e6a7b5d7c0 | [sources/09eaa4ddd53c](sources/09eaa4ddd53c) |
 | Selectable message application 1.1.8+ccc9d8bbb124 | ccc9d8bbb12488a761500af80e2a83ec902d5275 | [sources/ccc9d8bbb124](sources/ccc9d8bbb124) |
 | Research application and gateway 1.1.7+e663f7dbe063 | e663f7dbe063cc04b326ab053029bf06cc665df9 | [sources/e663f7dbe063](sources/e663f7dbe063) |
@@ -24,3 +25,5 @@ The research update adds Mwmbl and DuckDuckGo over the selected customer executo
 This update renders sent messages as ordinary selectable prose with paragraphs and a copy action. It preserves security checks and executor authorization deadlines. Its complete source tree is available above; the original release ZIP remains a historical archive.
 
 This update restores the original sent-message background with readable Markdown and contrasting selection. Paragraphs and the copy action remain. It preserves security checks and executor authorization deadlines. Its complete source tree is available above; the original release ZIP remains a historical archive.
+
+This snapshot adds typed operator input for code-delivery consent, one-time codes, optional authenticated sessions and manual actions. Sensitive replies use scoped temporary executor environment references; the local cookie-export helper never uploads automatically. Focused pure tests and a synthetic browser preview passed; full PostgreSQL/executor authentication integration remains unverified. Agent/gateway binaries and executor deadlines are unchanged.
