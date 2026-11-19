@@ -2589,13 +2589,13 @@
     },
     {
       "path": "PUBLICATION.json",
-      "bytes": 1385,
-      "sha256": "ebf640892cd4f38bf62f4287b3c96eb84bdcb9d1e84ef19f531923a833637537"
+      "bytes": 1382,
+      "sha256": "fd79344032d38ad24812e3cc0c9e4b7d4d027ecf9848d214271faf88b6bbc6ca"
     },
     {
       "path": "README.md",
       "bytes": 12197,
-      "sha256": "73d1586cda6fa225fe546961c35ea5dc9b29b9ddef96d2b0ff540395f6ac04ec"
+      "sha256": "a2338adc446f47ec8ebb25d207bebce84d03e25b850836139a44b7329d68bdac"
     },
     {
       "path": "reconstruction/frontend-files.json",
