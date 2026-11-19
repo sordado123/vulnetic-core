@@ -1,0 +1,17 @@
+[Unit]
+Description=Vulnetic operator metrics and alerts
+Requires=docker.service
+After=docker.service
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/vulnetic
+StateDirectory=vulnetic-operator
+UMask=0077
+ExecStart=/bin/bash -o pipefail -c '/usr/bin/docker compose --env-file .env.beta -f docker-compose.beta.yml logs --follow --tail 0 --no-color --no-log-prefix app | /usr/bin/python3 scripts/beta_monitor.py --stdin --output /var/lib/vulnetic-operator/metrics.jsonl'
+Restart=always
+RestartSec=5
+TimeoutStopSec=15
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,14 @@
+credentials-file: /run/secrets/tunnel_credentials
+# Only these public paths reach the agent gateway; private control routes are never published.
+ingress:
+  - hostname: agent.vulnetic.site
+    path: ^/agent/(enroll|connect|install\.sh|binary/(amd64|arm64|windows-amd64)|checksum/(amd64|arm64|windows-amd64))$
+    service: http://172.30.240.4:8788
+  - hostname: agent.vulnetic.site
+    service: http_status:404
+  - hostname: vulnetic.site
+    path: ^/agent/(enroll|connect|install\.sh|binary/(amd64|arm64)|checksum/(amd64|arm64))$
+    service: http://172.30.240.4:8788
+  - hostname: vulnetic.site
+    service: http://172.30.240.3:8787
+  - service: http_status:404

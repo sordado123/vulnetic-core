@@ -1,0 +1,305 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+
+import { AlertTriangle, ShieldCheck } from "lucide-react";
+
+import { AuthShell } from "@/components/auth-shell";
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Dialog, DialogClose, DialogContent, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { api } from "@/lib/api";
+import { auth } from "@/lib/auth";
+
+export default function LoginPage() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [checking, setChecking] = useState(true);
+  const [publicSignup,setPublicSignup]=useState(false);
+  const [agreed, setAgreed] = useState(false);
+  const [termsOpen, setTermsOpen] = useState(false);
+  const [readToEnd, setReadToEnd] = useState(false);
+  const termsBodyRef = useRef<HTMLDivElement>(null);
+
+  // Scroll to the bottom of the terms (including when everything fits without scrolling) to unlock "Agree".
+  function handleTermsScroll() {
+    const el = termsBodyRef.current;
+    if (!el) return;
+    if (el.scrollTop + el.clientHeight >= el.scrollHeight - 8) setReadToEnd(true);
+  }
+
+  useEffect(() => {
+    if (!termsOpen) return;
+    // Reset on open, and cover the case where the content is shorter than one screen and never fires a scroll.
+    setReadToEnd(false);
+    const el = termsBodyRef.current;
+    if (el && el.scrollHeight <= el.clientHeight + 8) setReadToEnd(true);
+  }, [termsOpen]);
+
+  useEffect(() => {
+    auth.bootstrap().then(ok=>{if(ok){window.location.replace("/function/tasks");return}return api.authStatus().then(status=>setPublicSignup(status.public_signup===true))}).catch(e=>setError((e as Error).message)).finally(()=>setChecking(false));
+  }, []);
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (!agreed) {
+      setError("Please read and agree to the Terms of Use first");
+      return;
+    }
+    setLoading(true);
+    setError("");
+    try {
+      const { token } = await api.login(email, password);
+      await auth.setToken(token);
+      window.location.replace("/function/tasks");
+    } catch {
+      setError("Incorrect email or password");
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  if (checking) {
+    return (
+      <div role="status" className="flex min-h-dvh items-center justify-center text-muted-foreground">
+        Checking login state…
+      </div>
+    );
+  }
+
+  return (
+    <>
+      <AuthShell>
+        <div className="space-y-8">
+          <div className="space-y-3">
+            <h1 className="text-[28px] font-semibold tracking-tight">Sign in</h1>
+            <p className="text-sm leading-relaxed text-muted-foreground">Welcome back. Continue to your workspace.</p>
+          </div>
+          <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+            <div className="space-y-1.5">
+              <Label htmlFor="email">Email</Label>
+              <Input
+                id="email"
+                required
+                className="h-11"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="you@company.com"
+                autoFocus
+                autoComplete="email"
+              />
+            </div>
+            <div className="space-y-1.5">
+              <Label htmlFor="password">Password</Label>
+              <Input
+                id="password"
+                required
+                className="h-11"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Enter your password"
+                autoComplete="current-password"
+              />
+            </div>
+            <div className="flex items-start gap-2">
+              <Checkbox
+                id="agree-terms"
+                checked={agreed}
+                onCheckedChange={(v) => setAgreed(v === true)}
+                className="mt-0.5"
+              />
+              <Label htmlFor="agree-terms" className="text-sm font-normal leading-relaxed text-muted-foreground">
+                I have read and agree to
+                <button
+                  type="button"
+                  onClick={() => setTermsOpen(true)}
+                  className="mx-0.5 font-medium text-primary underline-offset-4 hover:underline"
+                >
+                  Terms of Use
+                </button>
+              </Label>
+            </div>
+            {error && <p role="alert" className="text-sm text-destructive">{error}</p>}
+            <Button type="submit" className="h-11 w-full" disabled={loading || !email || !password || !agreed}>
+              {loading ? "Signing in..." : "Sign in"}
+            </Button>
+            <p className="text-center text-sm text-muted-foreground">
+              {publicSignup ? "New to Vulnetic?" : "Have an invitation?"}{" "}
+              <a href="/setup" className="font-medium text-primary underline-offset-4 hover:underline">
+                {publicSignup ? "Create a free account" : "Create your account"}
+              </a>
+            </p>
+          </form>
+        </div>
+      </AuthShell>
+
+      <Dialog open={termsOpen} onOpenChange={setTermsOpen}>
+        <DialogContent className="gap-0 p-0 sm:max-w-2xl">
+          <DialogHeader className="flex-row items-center gap-3 border-b px-6 py-4">
+            <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+              <ShieldCheck className="size-5" />
+            </div>
+            <div className="space-y-0.5">
+              <DialogTitle className="text-base">Vulnetic Terms of Use and Disclaimer</DialogTitle>
+              <p className="text-xs text-muted-foreground">
+                Version v1.2 · Effective 2026-11-08 · Please read all the following terms in full before signing in
+              </p>
+            </div>
+          </DialogHeader>
+
+          <div
+            ref={termsBodyRef}
+            onScroll={handleTermsScroll}
+            className="max-h-[60vh] space-y-5 overflow-y-auto px-6 py-5 text-sm leading-relaxed text-muted-foreground"
+          >
+            <p className="rounded-lg border bg-muted/40 p-3 text-foreground/80">
+              This Terms of Use and Disclaimer (the "Statement") is the agreement between you and Vulnetic
+              project authors and contributors regarding your use of this software. Please read it carefully and fully understand each provision before use, especially the disclaimer, liability-limitation, and prohibition clauses highlighted in bold or color blocks.
+              <span className="font-medium text-foreground">
+                {" "}
+                Once you download, install, access, or use this software in any way, you are deemed to have read, understood, and agreed to be bound by all of this Statement.
+              </span>
+            </p>
+
+            <section className="space-y-1.5">
+              <h4 className="flex items-center gap-2 font-medium text-foreground">
+                <span className="flex size-5 items-center justify-center rounded-md bg-muted text-xs font-semibold text-muted-foreground">
+                  1
+                </span>
+                Article 1 · Definitions and Open-Source License
+              </h4>
+              <p className="pl-7">
+                This software (Vulnetic) is an open-source program released under the GNU Affero General Public License
+                v3.0 (AGPL-3.0). You may freely use, copy, modify, and distribute it under that license; however, any derivative work (including online services provided to third parties over a network) must likewise be open-sourced under
+                the applicable AGPL-3.0 terms, including the offer of corresponding source to remote users. The accompanying LICENSE governs software licensing. These service terms do not restrict rights granted by that license or independently relicense third-party components.
+              </p>
+            </section>
+
+            <section className="space-y-1.5">
+              <h4 className="flex items-center gap-2 font-medium text-foreground">
+                <span className="flex size-5 items-center justify-center rounded-md bg-muted text-xs font-semibold text-muted-foreground">
+                  2
+                </span>
+                Article 2 · Permitted Scope of Use
+              </h4>
+              <p className="pl-7">
+                This software is a security-testing platform. You may use it for: personal study, code research, and technical verification in environments you set up yourself; security testing of systems you own; security testing of third-party systems when you hold the owner's explicit authorization; and testing within the written scope of a bug bounty or vulnerability disclosure program, in compliance with that program's rules of engagement. You are responsible for obtaining and keeping proof of authorization, for staying inside the authorized scope, and for the safety and proportionality of every action the software takes on your behalf.
+              </p>
+            </section>
+
+            <section className="space-y-2">
+              <h4 className="flex items-center gap-2 font-medium text-destructive">
+                <span className="flex size-5 items-center justify-center rounded-md bg-destructive/10 text-xs font-semibold text-destructive">
+                  3
+                </span>
+                <AlertTriangle className="size-4" />
+                Article 3 · Prohibited Conduct
+              </h4>
+              <ul className="ml-7 list-decimal space-y-1.5 rounded-lg border border-destructive/20 bg-destructive/5 p-3 pl-8 text-foreground/80 marker:text-destructive/70">
+                <li>
+                  Strictly forbidden: scanning, probing, exploiting, or attacking any system whose owner has not explicitly authorized you to test it, or exceeding the authorized scope or a program's rules of engagement once granted;
+                </li>
+                <li>Strictly forbidden: using this software for illegal intrusion, data theft, extortion, denial of service (DoS/DDoS), or any destructive or criminal activity;</li>
+                <li>Preserve copyright and license notices as required by their applicable licenses. Do not bypass the hosted service’s access controls;</li>
+                <li>Strictly forbidden: engaging in any conduct that violates the laws, regulations, or regulatory rules of your country or region.</li>
+              </ul>
+            </section>
+
+            <section className="space-y-1.5">
+              <h4 className="flex items-center gap-2 font-medium text-foreground">
+                <span className="flex size-5 items-center justify-center rounded-md bg-muted text-xs font-semibold text-muted-foreground">
+                  4
+                </span>
+                Article 4 · Intellectual Property
+              </h4>
+              <p className="pl-7">
+                The copyright and related intellectual property of this software belong to the project authors and contributors, who grant
+                you the corresponding rights within the scope of the AGPL-3.0 license. Beyond the rights expressly granted by that license, this Statement grants you no other rights, expressly or by implication.
+              </p>
+            </section>
+
+            <section className="space-y-1.5">
+              <h4 className="flex items-center gap-2 font-medium text-foreground">
+                <span className="flex size-5 items-center justify-center rounded-md bg-muted text-xs font-semibold text-muted-foreground">
+                  5
+                </span>
+                Article 5 · Data and Privacy
+              </h4>
+              <p className="pl-7">
+                In Vulnetic SaaS, the platform stores your account settings, credentials, task history, execution evidence and reports. Commands and customer-configured tools run on the VPS you select. Model requests use your configured provider and may include task content and tool results. Review your scope, provider settings and collected data before starting a task or sharing a report.
+              </p>
+              <p className="pl-7">
+                The installation operator administers the platform, its backups and operational logs. Stored credentials are encrypted, and account access controls separate customer data. The platform does not automatically delete artifacts when the storage quota is reached. Only upload data you are authorized to process. For a self-hosted installation, your organization is the installation operator.
+              </p>
+            </section>
+
+            <section className="space-y-1.5">
+              <h4 className="flex items-center gap-2 font-medium text-foreground">
+                <span className="flex size-5 items-center justify-center rounded-md bg-muted text-xs font-semibold text-muted-foreground">
+                  6
+                </span>
+                Article 6 · Compliance and Legal Liability
+              </h4>
+              <p className="pl-7">
+                You must comply on your own with all laws and regulations of your country or region on cybersecurity, data security and personal-information protection, computer crime, and the like (for example, laws on unauthorized access to computer systems, on personal-data protection, and on the responsibilities of security researchers and penetration testers in your jurisdiction).
+                <span className="font-medium text-foreground">
+                  {" "}
+                  All legal liability and consequences arising from your violation of the above laws and regulations or of this Statement are borne by you alone and have nothing to do with this software's authors and contributors.
+                </span>
+              </p>
+            </section>
+
+            <section className="space-y-1.5">
+              <h4 className="flex items-center gap-2 font-medium text-foreground">
+                <span className="flex size-5 items-center justify-center rounded-md bg-muted text-xs font-semibold text-muted-foreground">
+                  7
+                </span>
+                Article 7 · Disclaimer and Limitation of Liability
+              </h4>
+              <p className="pl-7">
+                This software is provided on an "AS IS" and "AS
+                AVAILABLE" basis, without any express or implied warranty, including but not limited to warranties of merchantability, fitness for a particular purpose, accuracy, and non-infringement. To the maximum extent permitted by applicable law, this software's authors and contributors are not liable for any direct, indirect, incidental, special, or consequential loss arising from using or being unable to use this software (regardless of whether it is used properly), including but not limited to data loss, system damage, business interruption, loss of profit, or legal disputes.
+              </p>
+            </section>
+
+            <section className="space-y-1.5">
+              <h4 className="flex items-center gap-2 font-medium text-foreground">
+                <span className="flex size-5 items-center justify-center rounded-md bg-muted text-xs font-semibold text-muted-foreground">
+                  8
+                </span>
+                Article 8 · Changes to the Terms and Final Interpretation
+              </h4>
+              <p className="pl-7">
+                The authors may update this Statement from time to time as laws, regulations, or project development require; the updated version ships with the project and takes effect on its publication date, and your continued use of this software means you accept the revised terms. To the extent permitted by law, the authors hold the final right of interpretation of this Statement. If any provision of this Statement is held invalid, the remaining provisions stay in effect.
+              </p>
+            </section>
+          </div>
+
+          <DialogFooter className="mx-0 mb-0 flex-col items-stretch gap-2 rounded-b-xl px-6 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-xs text-muted-foreground">
+              {readToEnd ? "You have read all the terms" : "Scroll the terms to the bottom to confirm"}
+            </p>
+            <DialogClose asChild>
+              <Button
+                type="button"
+                disabled={!readToEnd}
+                onClick={() => {
+                  setAgreed(true);
+                  setError("");
+                }}
+              >
+                I have read and agree to all the terms
+              </Button>
+            </DialogClose>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+    </>
+  );
+}
