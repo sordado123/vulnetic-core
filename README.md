@@ -139,7 +139,7 @@ This repository is a source release. It contains complete versioned module trees
 
 | Component | Source directory |
 | --- | --- |
-| Current hosted application 1.1.9+09eaa4ddd53c | [sources/09eaa4ddd53c](sources/09eaa4ddd53c) |
+| Current hosted application 1.1.10+a7397fe9cbfe | [sources/a7397fe9cbfe](sources/a7397fe9cbfe) |
 | Historical application, frontend and gateway baseline | [sources/5dd361d9b11d](sources/5dd361d9b11d) |
 | Linux/Windows executor and shared packages | [sources/83c2ce102c8a](sources/83c2ce102c8a) |
 | Proof reconciler | [sources/f92615b76a05](sources/f92615b76a05) |
@@ -156,7 +156,7 @@ cd vulnetic-core
 pwsh ./reconstruction/rebuild.ps1 -WorkDirectory C:\vulnetic-build
 ```
 
-The recorded reconstruction recipe targets the historical source-offer revision `e70e7e6dc6ab`. The latest hosted UI is in `sources/09eaa4ddd53c`; its frontend and Linux application were compiled for this update, without rerunning the complete historical reconstruction.
+The recorded reconstruction recipe targets the historical source-offer revision `e70e7e6dc6ab`. The latest hosted UI is in `sources/a7397fe9cbfe`; its frontend and Linux application were compiled for this update, without rerunning the complete historical reconstruction.
 
 The build directory must not already exist. The recipe fetches locked dependencies and builds locally; it does not start an executor, create a customer account or deploy the hosted service. See [DEPENDENCIES.md](DEPENDENCIES.md) and [the recorded independent build](reconstruction/results.json).
 
