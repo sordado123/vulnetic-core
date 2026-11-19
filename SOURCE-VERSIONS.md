@@ -4,6 +4,7 @@ This public source release covers the historical artifacts listed in binary-sour
 
 | Component | Source revision | Location |
 | --- | --- | --- |
+| Selectable message application 1.1.8+ccc9d8bbb124 | ccc9d8bbb12488a761500af80e2a83ec902d5275 | [sources/ccc9d8bbb124](sources/ccc9d8bbb124) |
 | Research application and gateway 1.1.7+e663f7dbe063 | e663f7dbe063cc04b326ab053029bf06cc665df9 | [sources/e663f7dbe063](sources/e663f7dbe063) |
 | Compact chat application 1.1.6+06a2656006f3 | 06a2656006f3688c007eef28b26fbdde576cd476 | [sources/06a2656006f3](sources/06a2656006f3) |
 | Hosted application 1.1.5+e70e7e6dc6ab | e70e7e6dc6abb32262c1de28c984563ac45b6e8e | [sources/e70e7e6dc6ab](sources/e70e7e6dc6ab) |
@@ -18,3 +19,5 @@ Review files may record their earlier private/pre-publication preparation state.
 The compact chat update changes responsive layout, navigation and disclosure of execution metadata. It preserves security checks and executor authorization deadlines. Its complete source tree is available above; the original release ZIP remains a historical archive.
 
 The research update adds Mwmbl and DuckDuckGo over the selected customer executor, optional account keys for Tavily/Exa/Linkup, encrypted chat credentials and authenticated gateway environment forwarding, plus operator-input notifications. It preserves RLS, infrastructure protections, human finding review and absolute executor deadlines. Its complete source tree is available above; the original source release ZIP remains a historical archive. Compilation was performed without running test suites for this update.
+
+This update renders sent messages as ordinary selectable prose with paragraphs and a copy action. It preserves security checks and executor authorization deadlines. Its complete source tree is available above; the original release ZIP remains a historical archive.

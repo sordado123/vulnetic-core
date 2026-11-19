@@ -1,0 +1,7 @@
+{
+  "original_revision": "ccc9d8bbb12488a761500af80e2a83ec902d5275",
+  "legal_changes": "Preserves the reviewed legal overlay from e663f7dbe063. Two frontend files change: sent-message prose rendering, visible text selection and copy action. No dependency or security-policy changes.",
+  "excluded": "Git history, operational documents, local configurations, keys, databases, logs, generated binaries and runtime artifacts.",
+  "reconstruction": "Static frontend and Linux application compiled from this exported snapshot. Gateway and executor binaries retain their original revisions. No test suites run.",
+  "license_resolution": "See ../../LICENSE-RESOLUTIONS.json; source-only final review profile; runtime behavior unchanged."
+}
