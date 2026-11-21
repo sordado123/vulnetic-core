@@ -78,5 +78,12 @@
     "role": "Scoped operator-assisted authentication and manual input",
     "base_revision": "09eaa4ddd53c51097ab380e5611938e6a7b5d7c0",
     "legal_overlay": "Same reviewed legal overlay; no new dependencies, customer data, operational history, gateway or executor binaries."
+  },
+  {
+    "source_revision": "ef2a75eedf3d37350ac70783d9de4ce4b35e6e23",
+    "directory": "sources/ef2a75eedf3d",
+    "role": "Managed Linux service-user reinstall repair",
+    "base_revision": "a7397fe9cbfeafb327f76963ad3921e5b59e3d03",
+    "legal_overlay": "Same reviewed legal overlay; only the shared installer and a synthetic regression fixture change. No dependencies or executor binaries change."
   }
 ]
