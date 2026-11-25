@@ -1,0 +1,7 @@
+{
+  "original_revision": "3263481f10eeb0b4a306a8445b569f26d9411278",
+  "legal_changes": "Preserves the reviewed legal overlay of ef2a75eedf3d. Adds bounded gateway failure categories and retries only unreachable IPs from the fully validated remote DNS answer. No dependencies change.",
+  "excluded": "Git history, operational documents, local configurations, keys, databases, logs, generated binaries and runtime artifacts.",
+  "reconstruction": "Linux application and gateway compiled with unchanged frontend and executor binaries. Focused transport/policy tests only. No paid model calls, external CI or extra backups. Customer will validate actual chat searches after publication.",
+  "license_resolution": "Reviewed license/provenance resolutions retained; no new dependencies. See ../../LICENSE-RESOLUTIONS.json."
+}

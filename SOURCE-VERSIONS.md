@@ -4,6 +4,7 @@ This public source release covers the historical artifacts listed in binary-sour
 
 | Component | Source revision | Location |
 | --- | --- | --- |
+| Search transport 1.1.12+3263481f10ee | 3263481f10eeb0b4a306a8445b569f26d9411278 | [sources/3263481f10ee](sources/3263481f10ee) |
 | Installer repair 1.1.11+ef2a75eedf3d | ef2a75eedf3d37350ac70783d9de4ce4b35e6e23 | [sources/ef2a75eedf3d](sources/ef2a75eedf3d) |
 | Operator input application 1.1.10+a7397fe9cbfe | a7397fe9cbfeafb327f76963ad3921e5b59e3d03 | [sources/a7397fe9cbfe](sources/a7397fe9cbfe) |
 | Message background application 1.1.9+09eaa4ddd53c | 09eaa4ddd53c51097ab380e5611938e6a7b5d7c0 | [sources/09eaa4ddd53c](sources/09eaa4ddd53c) |
@@ -30,3 +31,5 @@ This update restores the original sent-message background with readable Markdown
 This snapshot adds typed operator input for code-delivery consent, one-time codes, optional authenticated sessions and manual actions. Sensitive replies use scoped temporary executor environment references; the local cookie-export helper never uploads automatically. Focused pure tests and a synthetic browser preview passed; full PostgreSQL/executor authentication integration remains unverified. Agent/gateway binaries and executor deadlines are unchanged.
 
 This shared installer repair restores nologin for locked, isolated legacy service accounts only after verifying their expected home and trusted root-owned installer marker. Unexpected accounts remain blocked. Existing workspace contents and executor deadlines are unchanged. A Linux regression fixture is included; no test suite was run for this correction.
+
+This update preserves bounded gateway failure categories and tries another fully validated remote DNS address only when the previous destination is unreachable. Mandatory policy blocks, cancellation, expired/revoked access and account permissions never trigger a retry. Focused tests passed; real chat searches remain for the customer to validate after publication. No paid model calls or external CI.
