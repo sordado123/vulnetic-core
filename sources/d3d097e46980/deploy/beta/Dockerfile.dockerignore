@@ -1,0 +1,8 @@
+**
+!dist/
+!dist/amd64/
+!dist/amd64/vulnetic
+!dist/amd64/vulnetic-proof-reconcile
+!dist/amd64/vulnetic-gateway
+!dist/agents/
+!dist/agents/**

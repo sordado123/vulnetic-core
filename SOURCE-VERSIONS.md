@@ -4,6 +4,7 @@ This public source release covers the historical artifacts listed in binary-sour
 
 | Component | Source revision | Location |
 | --- | --- | --- |
+| Assessment application 1.1.13+d3d097e46980 | d3d097e469804fbff81339d7a6bb092f57db12d9 | [sources/d3d097e46980](sources/d3d097e46980) |
 | Search transport 1.1.12+3263481f10ee | 3263481f10eeb0b4a306a8445b569f26d9411278 | [sources/3263481f10ee](sources/3263481f10ee) |
 | Installer repair 1.1.11+ef2a75eedf3d | ef2a75eedf3d37350ac70783d9de4ce4b35e6e23 | [sources/ef2a75eedf3d](sources/ef2a75eedf3d) |
 | Operator input application 1.1.10+a7397fe9cbfe | a7397fe9cbfeafb327f76963ad3921e5b59e3d03 | [sources/a7397fe9cbfe](sources/a7397fe9cbfe) |

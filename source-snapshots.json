@@ -92,5 +92,12 @@
     "role": "Gateway opening diagnostics and remote DNS alternative addresses",
     "base_revision": "ef2a75eedf3d37350ac70783d9de4ce4b35e6e23",
     "legal_overlay": "Same reviewed legal overlay; bounded gateway diagnostics and validated DNS alternative connection attempts. No dependencies or executor binaries change."
+  },
+  {
+    "source_revision": "d3d097e469804fbff81339d7a6bb092f57db12d9",
+    "directory": "sources/d3d097e46980",
+    "role": "Assessment tools, research pipeline and VPS regression corrections",
+    "base_revision": "3263481f10ee",
+    "legal_overlay": "Same reviewed legal overlay; no new product dependencies or copied PentAGI code."
   }
 ]

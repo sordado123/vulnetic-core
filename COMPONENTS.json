@@ -1,6 +1,7 @@
 {
   "core": {
     "source_directories": [
+      "sources/d3d097e46980",
       "sources/3263481f10ee",
       "sources/ef2a75eedf3d",
       "sources/a7397fe9cbfe",

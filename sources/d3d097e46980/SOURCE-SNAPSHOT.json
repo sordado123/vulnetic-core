@@ -1,0 +1,7 @@
+{
+  "original_revision": "d3d097e469804fbff81339d7a6bb092f57db12d9",
+  "base_revision": "3263481f10ee",
+  "legal_changes": "Preserves the reviewed legal overlay and notices. Own assessment/research implementation, no PentAGI code or new product dependencies.",
+  "excluded": "Git history, operator documents, configurations, keys, databases, logs, binaries and runtime artifacts.",
+  "reconstruction": "Linux application built from these sources with the validated static frontend. Existing executor/gateway binaries remain unchanged; see release manifest. Nine baseline cases corrected and validated in the isolated VPS test matrix."
+}
