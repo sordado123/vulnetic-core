@@ -1,0 +1,7 @@
+{
+  "original_revision": "5f2200d56cb3442400fff0af1ee4f53767ad28e9",
+  "base_revision": "780b72e33210",
+  "legal_changes": "Preserves the reviewed legal overlay and notices. Adds native account/session context search, paginated restoration and incremental compaction. No external proxy, copied third-party code or new dependency.",
+  "excluded": "Git history, operator documents, configurations, keys, databases, logs, binaries and runtime artifacts.",
+  "reconstruction": "Application built from this source tree with the unchanged frontend. No tests, paid LLM calls or extra backups for this update by user request. Gateway and customer agents remain unchanged."
+}

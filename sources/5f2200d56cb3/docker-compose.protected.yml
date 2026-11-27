@@ -1,0 +1,85 @@
+# Merge with docker-compose.beta.yml after operator migration and backup.
+# No normal service receives POSTGRES_PASSWORD (the table-owner credential).
+services:
+  app:
+    environment:
+      VULNETIC_PG_DSN: postgres://vulnetic_app:${POSTGRES_APP_PASSWORD:?Set the RLS runtime password}@postgres:5432/vulnetic_beta?sslmode=disable
+      VULNETIC_GATEWAY_URL: http://172.30.241.3:8789
+      VULNETIC_GATEWAY_PUBLIC_URL: http://172.30.240.4:8788
+      VULNETIC_GATEWAY_TOKEN_FILE: /run/secrets/gateway_token
+      VULNETIC_AGENT_PUBLIC_URL: https://agent.vulnetic.site
+      VULNETIC_LEGACY_AGENT_UNTIL: ${VULNETIC_LEGACY_AGENT_UNTIL:?Set the fixed legacy cutoff}
+      VULNETIC_PROTECTED_TARGETS: ${VULNETIC_PROTECTED_TARGETS:-}
+      VULNETIC_INGRESS_TRUSTED_PROXIES: 172.30.240.2/32
+    secrets: [gateway_token]
+    ports: !reset []
+    networks:
+      edge: {ipv4_address: 172.30.240.3}
+      control: {ipv4_address: 172.30.241.2}
+      data: {ipv4_address: 172.30.242.2}
+    mem_limit: 3g
+    pids_limit: 256
+    depends_on:
+      gateway: {condition: service_started}
+  gateway:
+    image: vulnetic-gateway:local
+    build:
+      context: .
+      dockerfile: deploy/beta/Dockerfile.gateway
+    user: 10002:10002
+    environment:
+      VULNETIC_GATEWAY_TOKEN_FILE: /run/secrets/gateway_token
+      VULNETIC_GATEWAY_TRUSTED_PROXIES: 172.30.240.2/32,172.30.240.3/32
+      VULNETIC_LEGACY_AGENT_HOST: vulnetic.site
+      VULNETIC_LEGACY_AGENT_UNTIL: ${VULNETIC_LEGACY_AGENT_UNTIL:?Set the fixed legacy cutoff}
+      VULNETIC_AGENT_PUBLIC_URL: https://agent.vulnetic.site
+      VULNETIC_AGENT_BINARY_DIR: /usr/local/lib/vulnetic/agents
+    secrets: [gateway_token]
+    read_only: true
+    tmpfs: ["/tmp:rw,nosuid,nodev,noexec,size=16m"]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 256m
+    cpus: 0.5
+    pids_limit: 64
+    dns: [127.0.0.1]
+    networks:
+      edge: {ipv4_address: 172.30.240.4}
+      control: {ipv4_address: 172.30.241.3}
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options: {max-size: "10m", max-file: "3"}
+  prepare:
+    networks:
+      data: {}
+  postgres:
+    networks:
+      data: {ipv4_address: 172.30.242.3}
+    mem_limit: 2g
+    pids_limit: 128
+  tunnel:
+    image: ${VULNETIC_CLOUDFLARED_IMAGE:?Set a verified cloudflared image digest}
+    command: [tunnel, --no-autoupdate, --config, /etc/cloudflared/config.yml, run, "${VULNETIC_TUNNEL_ID:?Set the tunnel UUID}"]
+    user: 65532:65532
+    secrets: [tunnel_credentials]
+    volumes:
+      - ./deploy/beta/cloudflared.yml:/etc/cloudflared/config.yml:ro
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 128m
+    pids_limit: 32
+    networks:
+      edge: {ipv4_address: 172.30.240.2}
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options: {max-size: "10m", max-file: "3"}
+networks:
+  edge: {ipam: {config: [{subnet: 172.30.240.0/29}]}}
+  control: {internal: true, ipam: {config: [{subnet: 172.30.241.0/29}]}}
+  data: {internal: true, ipam: {config: [{subnet: 172.30.242.0/29}]}}
+secrets:
+  gateway_token: {file: ./secrets/gateway-token}
+  tunnel_credentials: {file: ./secrets/tunnel-credentials.json}

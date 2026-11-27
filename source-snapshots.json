@@ -120,5 +120,12 @@
     "role": "Document dependency setup during enrollment and without re-enrollment",
     "base_revision": "cf40fb8b6fa3",
     "legal_overlay": "Preserved reviewed overlay; existing legal overlay; system-installed OCR tools are not bundled."
+  },
+  {
+    "source_revision": "5f2200d56cb3442400fff0af1ee4f53767ad28e9",
+    "directory": "sources/5f2200d56cb3",
+    "role": "Account/session context search, restoration and incremental compaction",
+    "base_revision": "780b72e33210",
+    "legal_overlay": "Preserved reviewed overlay; existing legal overlay; system-installed OCR tools are not bundled."
   }
 ]
