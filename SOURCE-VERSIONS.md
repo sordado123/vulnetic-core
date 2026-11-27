@@ -4,7 +4,7 @@ This public source release covers the historical artifacts listed in binary-sour
 
 | Component | Source revision | Location |
 | --- | --- | --- |
-| Local document reading 1.1.17+5f2200d56cb3 | 5f2200d56cb3442400fff0af1ee4f53767ad28e9 | [sources/5f2200d56cb3](sources/5f2200d56cb3) |
+| Session context memory 1.1.17+5f2200d56cb3 | 5f2200d56cb3442400fff0af1ee4f53767ad28e9 | [sources/5f2200d56cb3](sources/5f2200d56cb3) |
 | Local document reading 1.1.16+780b72e33210 | 780b72e3321005af4ac47ac49f5082aad43b3ac2 | [sources/780b72e33210](sources/780b72e33210) |
 | Local document reading 1.1.15+cf40fb8b6fa3 | cf40fb8b6fa332b2734e51cb26d01088724abced | [sources/cf40fb8b6fa3](sources/cf40fb8b6fa3) |
 | CVE reference research 1.1.14+ade89f22fed3 | ade89f22fed31a8f28c363c73b92c64f6d05a482 | [sources/ade89f22fed3](sources/ade89f22fed3) |

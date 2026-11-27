@@ -2589,8 +2589,8 @@
     },
     {
       "path": "PUBLICATION.json",
-      "bytes": 1585,
-      "sha256": "be305dedb3041252a5a2b4c75a0516cf0309eb2e997a906d1bc5185ea111bcc7"
+      "bytes": 1512,
+      "sha256": "820dcbd162b449deb760857b4deac867f004c8216fb1549f68a855ff31fd4771"
     },
     {
       "path": "README.md",
@@ -2755,7 +2755,7 @@
     {
       "path": "SOURCE-VERSIONS.md",
       "bytes": 8179,
-      "sha256": "3a7265d7ba9ce9af3504e680a4b81ed84dea5aea05d17da91e7e46fec6710831"
+      "sha256": "2bc8d2df675d4a4d98d5019dc738a3df936b67f9267881310947f95325f6e399"
     },
     {
       "path": "sources/5dd361d9b11d/.dockerignore",
