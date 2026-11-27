@@ -113,5 +113,12 @@
     "role": "Executor-local PDF/image extraction using Poppler and Tesseract",
     "base_revision": "ade89f22fed3",
     "legal_overlay": "Preserved reviewed overlay; existing legal overlay; system-installed OCR tools are not bundled."
+  },
+  {
+    "source_revision": "780b72e3321005af4ac47ac49f5082aad43b3ac2",
+    "directory": "sources/780b72e33210",
+    "role": "Document dependency setup during enrollment and without re-enrollment",
+    "base_revision": "cf40fb8b6fa3",
+    "legal_overlay": "Preserved reviewed overlay; existing legal overlay; system-installed OCR tools are not bundled."
   }
 ]

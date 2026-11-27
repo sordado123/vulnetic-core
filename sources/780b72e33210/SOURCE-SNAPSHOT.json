@@ -1,0 +1,7 @@
+{
+  "original_revision": "780b72e3321005af4ac47ac49f5082aad43b3ac2",
+  "base_revision": "cf40fb8b6fa3",
+  "legal_changes": "Preserves the reviewed legal overlay and notices. Adds local document reading through executor-installed Poppler/Tesseract. No bundled dependency or Go dependency added.",
+  "excluded": "Git history, operator documents, configurations, keys, databases, logs, binaries and runtime artifacts.",
+  "reconstruction": "Application, updated frontend and gateway built from this source tree. No tests, paid LLM calls or extra backups for this update by user request. Customer agent binaries remain unchanged; gateway updated to serve the new installer."
+}
