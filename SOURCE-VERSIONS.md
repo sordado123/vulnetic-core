@@ -4,6 +4,7 @@ This public source release covers the historical artifacts listed in binary-sour
 
 | Component | Source revision | Location |
 | --- | --- | --- |
+| CVE reference research 1.1.14+ade89f22fed3 | ade89f22fed31a8f28c363c73b92c64f6d05a482 | [sources/ade89f22fed3](sources/ade89f22fed3) |
 | Assessment application 1.1.13+d3d097e46980 | d3d097e469804fbff81339d7a6bb092f57db12d9 | [sources/d3d097e46980](sources/d3d097e46980) |
 | Search transport 1.1.12+3263481f10ee | 3263481f10eeb0b4a306a8445b569f26d9411278 | [sources/3263481f10ee](sources/3263481f10ee) |
 | Installer repair 1.1.11+ef2a75eedf3d | ef2a75eedf3d37350ac70783d9de4ce4b35e6e23 | [sources/ef2a75eedf3d](sources/ef2a75eedf3d) |
@@ -34,3 +35,5 @@ This snapshot adds typed operator input for code-delivery consent, one-time code
 This shared installer repair restores nologin for locked, isolated legacy service accounts only after verifying their expected home and trusted root-owned installer marker. Unexpected accounts remain blocked. Existing workspace contents and executor deadlines are unchanged. A Linux regression fixture is included; no test suite was run for this correction.
 
 This update preserves bounded gateway failure categories and tries another fully validated remote DNS address only when the previous destination is unreachable. Mandatory policy blocks, cancellation, expired/revoked access and account permissions never trigger a retry. Focused tests passed; real chat searches remain for the customer to validate after publication. No paid model calls or external CI.
+
+This update adds lookup_cve_references for account/executor-scoped metadata research from PoC-in-GitHub, GitHub Search and CIRCL, with bounded cache, concurrent request coalescing, deduplicated links and provider cooldowns. Existing CVE and web research sources remain. No PoC code is downloaded or executed. No tests or extra backups were run by user request; only the application is replaced, preserving gateway, agent binaries, RLS and absolute executor deadlines. Source availability does not assert production activation; see PUBLICATION.json.

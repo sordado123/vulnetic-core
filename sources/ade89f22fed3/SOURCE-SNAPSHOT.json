@@ -1,0 +1,7 @@
+{
+  "original_revision": "ade89f22fed31a8f28c363c73b92c64f6d05a482",
+  "base_revision": "d3d097e46980",
+  "legal_changes": "Preserves the reviewed legal overlay and notices. Adds public metadata-only CVE reference research; no dependencies added.",
+  "excluded": "Git history, operator documents, configurations, keys, databases, logs, binaries and runtime artifacts.",
+  "reconstruction": "Application built from this source tree with the unchanged frontend. No tests, paid LLM calls or extra backups for this update by user request. Gateway and customer agents remain unchanged."
+}

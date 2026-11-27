@@ -99,5 +99,12 @@
     "role": "Assessment tools, research pipeline and VPS regression corrections",
     "base_revision": "3263481f10ee",
     "legal_overlay": "Same reviewed legal overlay; no new product dependencies or copied PentAGI code."
+  },
+  {
+    "source_revision": "ade89f22fed31a8f28c363c73b92c64f6d05a482",
+    "directory": "sources/ade89f22fed3",
+    "role": "Public CVE reference research: PoC-in-GitHub, GitHub Search and CIRCL",
+    "base_revision": "d3d097e46980",
+    "legal_overlay": "Preserved reviewed overlay; metadata-only providers, no new dependency."
   }
 ]
